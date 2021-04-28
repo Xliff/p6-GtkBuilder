@@ -1,0 +1,5 @@
+prefix=GTK
+modules=GTK::Raw::Types
+backups=backup,bitbucket,google-backup,azure-backupm,hut
+build_exclude=GtkAll
+other_provided=GTK::Raw::Types,GTK::Raw::Subs,GTK,GTK::Adjustment,GTK::Application,GTK::CSSProvider,GTK::Widget,GTK::Window
