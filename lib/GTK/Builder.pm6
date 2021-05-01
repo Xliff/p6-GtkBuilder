@@ -2,7 +2,7 @@ use v6.c;
 
 use Method::Also;
 use NativeCall;
-use XML::Actions;
+use LibXML;
 
 use Data::Dump::Tree;
 
@@ -19,18 +19,36 @@ use GTK::Application;
 use GTK::CSSProvider;
 use GTK::Widget;
 use GTK::Window;
+use GTK::Builder::Registry;
 
 use GLib::Roles::Object;
+
+# cw: WHOOPS! Looks like I had already started this. See .register class method!!
+
+role Origin {
+  has Str $!origin;
+
+  method origin {
+    $!origin
+  }
+
+  method setOrigin ($o) {
+    $!origin = $o;
+  }
+}
+
+my %staticCounters;
 
 class GTK::Builder does Associative {
   also does GLib::Roles::Object;
 
-  my (@prefixes, %aliases);
+  my (@prefixes, %aliases, %typeClasses, %namespaces);
 
   has GtkBuilder $!b is implementor;
   has GtkWindow $.window;
   has %!types;
   has $!css;
+  has $!top-level;
 
   has %!widgets handles <
     EXISTS-KEY
@@ -52,7 +70,11 @@ class GTK::Builder does Associative {
   ) {
     self!setObject($!b = $builder);             # GTK::Roles::Compat::Object
 
+    # cw: This code is unused. Excise it once stable.
     @prefixes = ('Gtk');
+
+    GTK::Builder.register(GTK::Builder::Registry)
+      unless %namespaces<GTK::Builder::Registry>:exists;
 
     my %sections;
     my ($ui-data, $style-data);
@@ -131,11 +153,18 @@ class GTK::Builder does Associative {
     $builder ?? self.bless(:$builder) !! Nil;
   }
 
-  method new_from_string (Str() $ui, Int() $length = -1)
+  method new_from_string (
+    Str() $ui       is copy,
+    Int() $length   =  -1,
+          :$process =  True
+  )
     is also<new-from-string>
   {
     # cw: Consider parsing this using a proper XML parser so
     #     we can use a subset of the passed XML.
+
+    # If requested, find serial markers and replace it with a digit and increment
+    $ui ~~ s:g/(\w+)'%s'/{ $0 }{ %staticCounters{$0 // ''}++ }/;
 
     die '$length must not be negative' unless $length > -2;
     my gssize $l = $length;
@@ -146,11 +175,10 @@ class GTK::Builder does Associative {
 
   #  new-from-buf??
 
-  method register (GTK::Builder:U: *@t) {
-    for @t -> $t {
-      if $t.^can('register').elems > 0 {
-        my %r = $t.register;
-        for %r.pairs {
+  method register (GTK::Builder:U: *@registries) {
+    for @registries -> \t {
+      if t.^lookup('aliases') -> $r {
+        for $r(t).pairs {
           if .key eq 'PREFIX' {
             @prefixes.push: .value;
             next;
@@ -161,13 +189,61 @@ class GTK::Builder does Associative {
               }, skipping...
               M
           } else {
+            # cw: I could be convinced to let %aliases go...
             %aliases{ .key } = .value;
+            ( %typeClasses{ .key } = (.value but Origin) ).setOrigin(t.^name);
           }
         }
-      } else {
-        say "Cannot register for { $t.^name }, skipping...";
+      }
+
+      if t.^lookup('typeClass') -> $m {
+        my $ns-name = t.^name;
+        for $m(t).pairs {
+          if %typeClasses{ .key } -> $ke {
+            say "Type { $ke } already set by package { $ke.origin }";
+          } else {
+            ( %typeClasses{ .key } = (.value but Origin)).setOrigin($ns-name);
+          }
+        }
+        %namespaces{$ns-name} = True;
       }
     }
+  }
+
+  method templateToUI (
+    GTK::Builder:U:
+
+    $template,
+    :$url          = False,
+    :&dom-callback = Callable
+  ) {
+    my %opts;
+
+    given $template {
+      when IO::Path              { %opts<location> = $template.absolute }
+      when IO::Handle            { %opts<io>       = $template }
+
+      when Str {
+        %opts{ $url ?? 'location' !! 'string' } = $template
+      }
+    }
+
+    my $dom = LibXML.parse(|%opts).root;
+    # For parsing, we first change all <template> to <object>
+    # For now... should only be one.
+    if $dom.find('//template')[0] -> $t {
+      # Rename the node from 'template' to 'object';
+      $t.name = 'object';
+      # It's id will become its class will appended serial.
+      $t.setAttribute('id', $t.getAttribute('class') ~ '%s');
+      # It's class will then become its parent.
+      $t.setAttribute( 'class', $t.getAttribute('parent') );
+      # Remove parent
+      $t.removeAttribute('parent');
+    }
+    &dom-callback($dom) if &dom-callback;
+
+    ~$dom;
   }
 
   method AT-KEY(Str $key) {
@@ -186,61 +262,36 @@ class GTK::Builder does Associative {
   ) {
     my %parent-types := %!types;
 
-    # cw: Can replace with LibXML and a one-liner at the expense of a heavy
-    #     but tested (and native!) dependency:
-    #
-    #       use LibXML;
-    #       my $dom = LibXML.parse(location => "cursor-slot.ui")
-    #                       .root
-    #                       .find("//object")
-    class UI-Parser is XML::Actions::Work {
-      method object:start (Array $parent-path, :$class, :$id is copy) {
-        my $args;
-        state %collider;
-
-        (my $type = $class) ~~
-          s/ ( @prefixes ) ( <[A..Za..z]>+ )/{ $0.uc }::{ $1 }/;
-
-        $type = do given $type {
-          when 'GTK::Adjustment' {
-            $args = ['cast', GtkAdjustment];
-            $_;
-          }
-          when 'GTK::VBox' {
-            #$args = ['option', { vertical => 1 } ];
-            'GTK::Box';
-          }
-          when 'GTK::HBox' {
-            #$args = ['option', { horizonrtal => 1 } ];
-            'GTK::Box';
-          }
-
-          default { $_; }
-        }
-
-        # Could make this an option, later.
-        # unless $id {
-        #   $id = $type.lc.split('::').join('');
-        #   $id ~= %collider{$id} if ++%collider{$id};
-        # }
-        %parent-types{$id} = [ $type, $args ] if $id;
-      }
-
-      method menu:start (Array $parent-path, :$id) {
-        my $args = [ 'cast', GMenuModel ];
-        %parent-types{$id} = [ 'GIO::Menu', $args ];
-      }
-    }
-
     {
       with $file     { }
       with $resource { }
       with $ui_def   {
-        # cw: LibXML replacement code would then go here.
-        #     If this is to proceed, then BRANCH, FIRST!
-        my $a = XML::Actions.new(xml => $ui_def);
+        my $dom = LibXML.parse(string => $ui_def).root;
 
-        $a.process( actions => UI-Parser.new );
+        my $firstLoop = True;
+        for $dom.find('//object | //menu') {
+          my ($id, $args, $type) = ( .getAttribute('id') );
+
+          if $firstLoop {
+            $!top-level = $id;
+            $firstLoop = False;
+          }
+
+          unless .name eq 'menu' {
+            $type = do given .getAttribute('class') {
+              when 'GtkAdjustment' {
+                $args = ['cast', GtkAdjustment];
+                proceed;
+              }
+
+              default {
+                %typeClasses{$_}
+              }
+            }
+          }
+          %parent-types{$id} = [ $type, $args ] if $id;
+        }
+
       }
     }
   }
@@ -271,12 +322,13 @@ class GTK::Builder does Associative {
         my $at = %aliases{$wt} // $wt;
 
         CATCH {
-          say qq:to/D/.chomp;
-          Error encountered when processing { $k } ({ $at }):
-          D
+          default {
+           say qq:to/D/.chomp;
+              Error encountered when processing { $k } ({ $at }): { .message }
+              D
 
-          .message.say;
-          exit;
+            exit;
+          }
         }
 
         when $args.defined {
@@ -299,6 +351,10 @@ class GTK::Builder does Associative {
 
     #ddt %!widgets;
   }
+
+  # cw: Get top-level control?
+  method top-level-id { $!top-level }
+  method top-level    { self.AT-KEY($!top-level) }
 
   # ↓↓↓↓ ATTRIBUTES ↓↓↓↓
   method application (:$raw = False) is rw {
@@ -490,10 +546,10 @@ class GTK::Builder does Associative {
 
   # YYY - Return type?
   method extend_with_template (
-    GtkWidget() $widget,
-    Int() $template_type,
-    Str() $buffer,
-    Int() $length,
+    GtkWidget()             $widget,
+    Int()                   $template_type,
+    Str()                   $buffer,
+    Int()                   $length,
     CArray[Pointer[GError]] $error = gerror
   )
     is also<extend-with-template>
@@ -561,9 +617,9 @@ class GTK::Builder does Associative {
 
   # YYY - Return type?
   method value_from_string (
-    GParamSpec $pspec,
-    Str() $string,
-    GValue() $value,
+    GParamSpec              $pspec,
+    Str()                   $string,
+    GValue()                $value,
     CArray[Pointer[GError]] $error = gerror
   )
     is also<value-from-string>
@@ -575,10 +631,10 @@ class GTK::Builder does Associative {
 
   # YYY - Return type?
   method value_from_string_type (
-    Int() $type,
-    Str() $string,
-    GValue() $value,
-    CArray[Pointer[GError]] $error = gerror
+    Int()                   $type,
+    Str()                   $string,
+    GValue()                $value,
+    CArray[Pointer[GError]] $error   = gerror
   )
     is also<value-from-string-type>
   {
