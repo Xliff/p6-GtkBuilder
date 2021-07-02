@@ -228,7 +228,7 @@ class GTK::Builder does Associative {
       }
     }
 
-    my $dom = LibXML.parse(|%opts).root;
+    my $dom = LibXML.parse(|%opts);
     # For parsing, we first change all <template> to <object>
     # For now... should only be one.
     if $dom.find('//template')[0] -> $t {
@@ -305,6 +305,11 @@ class GTK::Builder does Associative {
 
     self!getTypes(:$ui_def, :$file, :$resource);
     for %!types.keys -> $k {
+      CONTROL {
+        when     CX::Warn { .message.say; .backtrace.concise.say; .resume }
+        default           { .rethrow }
+      }
+
       my $o = self.get_object($k);
 
       given %!types{$k}[1][0] {
@@ -348,6 +353,8 @@ class GTK::Builder does Associative {
         }
       }
     }
+
+
 
     #ddt %!widgets;
   }
