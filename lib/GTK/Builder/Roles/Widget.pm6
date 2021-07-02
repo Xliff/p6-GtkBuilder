@@ -1,3 +1,7 @@
+use v6.c;
+
+use Method::Also;
+
 my %attr-attribute-alias;
 
 role WidgetRole       { }
@@ -5,11 +9,12 @@ role ParentWidgetRole { }
 
 role GTK::Builder::Roles::Widget {
 
-  method GTK::Raw::Definitions::Widget
-  { self.parent-attribute.get_value(self) }
+  method GTK::Raw::Definitions::GtkWidget
+    is also<GtkWidget>
+  { ::?CLASS.parent-attribute.get_value(self).GtkWidget }
 
   method widget-attributes {
-    self.^attributes.grep( * ~~ WidgetRole )
+    ::?CLASS.^attributes.grep( * ~~ WidgetRole )
   }
 
   method builder-name {
@@ -24,14 +29,20 @@ role GTK::Builder::Roles::Widget {
     %anti-attr-attribute-name.Map
   }
 
+  method assign-attributes {
+    # cw: -XXX- Need to set attributes. Leverage use of attribute names and
+    #     traits like builder-name.
+
+  }
+
   # cw: Named such so as to NOT conflict with GTK, and we don't really
   #     want the parent object, but the parent attribute.
   method parent-attribute {
-    state $p = self.^attributes.grep( * ~~ ParentWidgetRole )[0];
+    state $p = ::?CLASS.^attributes.grep( * ~~ ParentWidgetRole )[0];
     $p;
   }
   method parent-class {
-    self.parent-attribute.type
+    ::?CLASS.parent-attribute
   }
 
 }
@@ -58,8 +69,8 @@ multi sub trait_mod:<is> (Attribute $a, :$parent-widget is required)
   die 'Can only have one parent widget per class!'
     unless ++%classes{ $a.package.^name } < 2;
 
-  $a but WidgetRole;
-  $a but ParentWidgetRole;
+  $a does WidgetRole;
+  $a does ParentWidgetRole;
 }
 
 
