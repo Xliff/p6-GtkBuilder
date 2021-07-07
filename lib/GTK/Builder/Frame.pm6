@@ -1,8 +1,8 @@
 use v6.c;
 
-use GTK::Builder::Base;
+use GTK::Builder::Widget;
 
-class GTK::Builder::Frame is GTK::Builder::Base does GTK::Builder::Role {
+class GTK::Builder::Frame is GTK::Builder::Widget does GTK::Builder::Role {
   my @attributes = <
     label
     label-widget
@@ -32,16 +32,17 @@ MI
           my $pg = $_;
           $prop = 'shadow_type';
           $o<props>{$pg} = do given $o<props>{$pg} {
-            when 'none'             { 'GTK_SHADOW_NONE'       }
-            when 'in'               { 'GTK_SHADOW_IN'         }
-            when 'out'              { 'GTK_SHADOW_OUT'        }
-            when 'etched-in'        { 'GTK_SHADOW_ETCHED_IN'  }
-            when 'etched-out'       { 'GTK_SHADOW_ETCHED_OUT' }
-            when /^ 'GTK_SHADOW_' / { $_; }
+            when 'none'                      { 'GTK_SHADOW_NONE'       }
+            when 'in'                        { 'GTK_SHADOW_IN'         }
+            when 'out'                       { 'GTK_SHADOW_OUT'        }
+            when 'etched-in'                 { 'GTK_SHADOW_ETCHED_IN'  }
+            when 'etched-out'                { 'GTK_SHADOW_ETCHED_OUT' }
+            when .starts-with('GTK_SHADOW_') { $_; }
           }
         }
       }
     });
+    
     @c;
   }
 
