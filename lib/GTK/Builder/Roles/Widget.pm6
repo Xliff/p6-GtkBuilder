@@ -2,6 +2,8 @@ use v6.c;
 
 use Method::Also;
 
+use GTK::Raw::Types;
+
 my %attr-attribute-alias;
 
 role WidgetRole       { }
@@ -29,10 +31,32 @@ role GTK::Builder::Roles::Widget {
     %anti-attr-attribute-name.Map
   }
 
-  method assign-attributes {
+  proto method assign-attributes (|)
+  { * }
+
+  multi method assign-attributes ($builder is copy) {
+    my \T = ::('GTK::Builder');
+
+    say "T:{ T.^name } / { T.WHERE }";
+    say "B:{ $builder.^name } / { $builder.WHAT.WHERE }";
+
+    $builder = T.new($builder) if $builder ~~ GtkBuilder;
+    # cw: Have to get creative, here!
+    die '.assign-attributes only accepts GTK::Builder-compatible arguments'
+      unless $builder.get_type == T.get_type;
+
     # cw: -XXX- Need to set attributes. Leverage use of attribute names and
     #     traits like builder-name.
+    for self.^attributes {
+      next unless $_ ~~ WidgetRole;
 
+      my $name = .name.substr(2);
+      if $builder{ %attr-attribute-alias{$name} // $name } -> $v {
+        .set_value(self, $v);
+      } else {
+        warn "No widget value found for control '$name'";
+      }
+    }
   }
 
   # cw: Named such so as to NOT conflict with GTK, and we don't really
@@ -46,7 +70,6 @@ role GTK::Builder::Roles::Widget {
   }
 
 }
-
 
 multi sub trait_mod:<is> (Attribute $a, :$widget is required)
   is export
