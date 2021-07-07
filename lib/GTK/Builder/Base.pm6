@@ -54,7 +54,7 @@ class GTK::Builder::Base does GTK::Builder::Role {
     %mro-list;
   }
 
-  method label_from_attributes($o) {
+  method label_from_attributes ($o) {
     my $enclosed = "%s";
     given $o<attrs><weight> {
       when 'bold' {
@@ -71,25 +71,36 @@ class GTK::Builder::Base does GTK::Builder::Role {
     sprintf($enclosed, $label);
   }
 
-  method create($v, $o) {
+  method create ($v, $o) {
     my @c;
     @c.push: "{ sprintf($v, $o<id>) } = GTK::{ self.name }.new();";
     @c;
   }
 
-  multi method properties($v, $o) {
+  multi method properties ($v, $o) {
     # If no properties method defined, then no code to emit.
     ();
   }
-  multi method properties($v, @a, $o, $s?) {
+  multi method properties ($v, @a, $o, $s?) {
     my @c;
 
     for $o<props>.keys {
       next unless $_;
       my $prop = $_;
       next unless @a.elems.not || $_ eq @a.any;
+
       # Per property special-cases
-      $s($prop) with $s;
+      my $result = $s($prop);
+
+      next if $result && $result<next>;
+
+      # Standard handling for properties with underscore in the name:
+      unless $result && $result<dash-handled> {
+        $prop = .subst('-', '_', :g) if .contains('-');
+        $o<prop>{ $prop } = $o<prop>{$_};
+        $o<prop>{$_}:delete;
+      }
+
       @c.push: "{ sprintf($v, $o<id>) }.{ $prop } = { $o<props>{$_} };";
       $o<props>{$_}:delete;
       # This does not work when outside the loop.... WHY?!?
@@ -105,7 +116,7 @@ class GTK::Builder::Base does GTK::Builder::Role {
     @c;
   }
 
-  multi method populate($v, $o) {
+  multi method populate ($v, $o) {
     # Containers will override this.
     ();
   }
