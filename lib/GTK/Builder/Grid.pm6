@@ -1,8 +1,8 @@
 use v6.c;
 
-use GTK::Builder::Base;
+use GTK::Builder::Widget;
 
-class GTK::Builder::Grid is GTK::Builder::Base {
+class GTK::Builder::Grid is GTK::Builder::Widget {
   my @attributes = <
     baseline-row
     column-homogeneous
@@ -11,16 +11,17 @@ class GTK::Builder::Grid is GTK::Builder::Base {
     row-spacing
   >;
 
-  multi method properties($v, $o) {
-    my @c = self.properties($v, @attributes, $o, -> $prop is rw {
-      given $prop {
-        when @attributes.any {
-          $prop ~~ s:g/ '-' / '_' /;
-        }
-      }
-    });
-    @c;
-  }
+  # multi method properties($v, $o) {
+  #   my @c = self.properties($v, @attributes, $o, -> $prop is rw {
+  #     given $prop {
+  #       when @attributes.any {
+  #         $prop ~~ s:g/ '-' / '_' /;
+  #       }
+  #     }
+  #   });
+  #
+  #   @c;
+  # }
 
   method populate($v, $o) {
     my @c;

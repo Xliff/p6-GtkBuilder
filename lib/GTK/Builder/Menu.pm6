@@ -1,8 +1,8 @@
 use v6.c;
 
-use GTK::Builder::Base;
+use GTK::Builder::Widget;
 
-class GTK::Builder::Menu is GTK::Builder::Base does GTK::Builder::Role {
+class GTK::Builder::Menu is GTK::Builder::Widget does GTK::Builder::Role {
 
   method populate($v, $o) {
     my @c;

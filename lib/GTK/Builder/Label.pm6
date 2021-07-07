@@ -1,8 +1,8 @@
 use v6.c;
 
-use GTK::Builder::Base;
+use GTK::Builder::Widget;
 
-class GTK::Builder::Label is GTK::Builder::Base does GTK::Builder::Role {
+class GTK::Builder::Label is GTK::Builder::Widget does GTK::Builder::Role {
   my @attributes = <
     angle
     attributes
