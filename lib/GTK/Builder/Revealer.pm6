@@ -1,8 +1,8 @@
 use v6.c;
 
-use GTK::Builder::Base;
+use GTK::Builder::Widget;
 
-class GTK::Builder::Revealer is GTK::Builder::Base does GTK::Builder::Role {
+class GTK::Builder::Revealer is GTK::Builder::Widget does GTK::Builder::Role {
   # Newer versions of Glade use an underscore instead of a dash, so have to
   # account for both.
   my @attributes = <
@@ -29,7 +29,7 @@ class GTK::Builder::Revealer is GTK::Builder::Base does GTK::Builder::Role {
             when 'slide-right' { 'GTK_REVEALER_TRANSITION_TYPE_SLIDE_RIGHT' }
             when 'slide-left'  { 'GTK_REVEALER_TRANSITION_TYPE_SLIDE_LEFT'  }
             when 'slide-up'    { 'GTK_REVEALER_TRANSITION_TYPE_SLIDE_UP'    }
-            when 'sldie-down'  { 'GTK_REVEALER_TRANSITION_TYPE_SLIDE_DOWN ' }
+            when 'slide-down'  { 'GTK_REVEALER_TRANSITION_TYPE_SLIDE_DOWN ' }
           }
           # Done to INSURE next block is attempted
           proceed;
