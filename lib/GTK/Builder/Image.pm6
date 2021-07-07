@@ -1,8 +1,8 @@
 use v6.c;
 
-use GTK::Builder::Base;
+use GTK::Builder::Widget;
 
-class GTK::Builder::Image is GTK::Builder::Base does GTK::Builder::Role {
+class GTK::Builder::Image is GTK::Builder::Widget does GTK::Builder::Role {
   my @attributes = <
     icon-name
     icon-set
