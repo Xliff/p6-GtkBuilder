@@ -10,7 +10,7 @@ class GTK::BuilderWidgets does Pluggable {
   has %!widgets;
   has $!var;
 
-  sub strip_mod($_) {
+  sub strip_mod ($_) {
     my $a = $_.^name;
     $a ~~ s/^ 'GTK::Builder::' //;
     $a
@@ -21,9 +21,11 @@ class GTK::BuilderWidgets does Pluggable {
     @!plugins = plugins('GTK',
       plugins-namespace => 'Builder',
       name-matcher      => /^
-        'GTK::Builder::'
-        <!before 'Base' | 'MRO' | 'Role'>/
+        'GTK::Builder::' <!before 'Base' | 'MRO' | 'Role'>/
     );
+
+    # cw: -YYY-
+    #     Attempting to do this with less indirection have failed. Why?
     for @!plugins.map( &strip_mod ) {
       require ::("GTK::Builder::{ $_ }");
       %!widgets{$_} = ::("GTK::Builder::{ $_ }");
@@ -48,14 +50,20 @@ class GTK::BuilderWidgets does Pluggable {
       #print 'P: ';
       #ddt $o;
       (my $w = $o<objects><class>) ~~ s/^ 'Gtk' //;
-      #say $w;
-      @code.append: %!widgets{$w}.create(self.var-temp, $o<objects>);
-      @code.append: %!widgets{$w}.properties(self.var-temp, $o<objects>);
-      if $o<objects><children>.elems {
-        @code.append: self.get-code-list($_) for $o<objects><children>;
-        my $vc = $o<objects>.deepmap(-> $c is copy { $c });
-        $vc<children> .= grep( *<objects>.elems );
-        @code.append: %!widgets{$w}.populate(self.var-temp, $vc);
+
+      %!widgets.keys.gist.say;
+      %!widgets{$_}.gist.say for %!widgets.keys;
+
+      given %!widgets{$w} {
+        say "W($w) = { .^name }";
+        @code.append: .create(self.var-temp, $o<objects>);
+        @code.append: .properties(self.var-temp, $o<objects>);
+        if $o<objects><children>.elems {
+          @code.append: self.get-code-list($_) for $o<objects><children>;
+          my $vc = $o<objects>.deepmap(-> $c is copy { $c });
+          $vc<children> .= grep( *<objects>.elems );
+          @code.append: .populate(self.var-temp, $vc);
+        }
       }
     }
     @code;
