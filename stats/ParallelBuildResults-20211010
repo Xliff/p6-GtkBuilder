@@ -1,0 +1,698 @@
+ === Data::Dump::Tree === 
+Stage start      :   0.000
+Stage parse      :   2.783
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Data::Dump::Tree compile time: 4.09719117
+ === GTK::TypeClass === 
+Stage start      :   0.000
+Stage parse      :   2.140
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.006
+Stage mast       :   0.013
+Stage mbc        :   0.003
+Stage moar       :   0.000
+
+GTK::TypeClass compile time: 3.96944179
+ === GTK::Builder::Registry === 
+Stage start      :   0.001
+Stage parse      :   2.331
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+GTK::Builder::Registry compile time: 4.0801907
+ === Pluggable === 
+Stage start      :   0.001
+Stage parse      :   2.341
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+Pluggable compile time: 4.11007923
+ === Method::Also === 
+Stage start      :   0.000
+Stage parse      :   2.943
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.004
+Stage mast       :   0.013
+Stage mbc        :   0.002
+Stage moar       :   0.000
+
+Method::Also compile time: 4.57372058
+ === GTK::Raw::Enums === 
+Stage start      :   0.000
+Stage parse      :   3.305
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.006
+Stage mast       :   0.008
+Stage mbc        :   0.003
+Stage moar       :   0.000
+
+GTK::Raw::Enums compile time: 5.00657818
+ === GTK::Raw::Subs === 
+Stage start      :   0.000
+Stage parse      :   3.291
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.002
+Stage moar       :   0.000
+
+GTK::Raw::Subs compile time: 5.07428659
+ === GLib::GSList === 
+Stage start      :   0.000
+Stage parse      :   3.778
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.003
+Stage moar       :   0.000
+
+GLib::GSList compile time: 5.1859753
+ === GLib::Roles::Object === 
+Stage start      :   0.000
+Stage parse      :   4.244
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.004
+Stage moar       :   0.000
+
+GLib::Roles::Object compile time: 5.61887795
+ === GTK::Raw::Types === 
+Stage start      :   0.000
+Stage parse      :   5.279
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.027
+Stage mast       :   0.018
+Stage mbc        :   0.013
+Stage moar       :   0.000
+
+GTK::Raw::Types compile time: 7.0941939
+ === GTK::Adjustment === 
+Stage start      :   0.000
+Stage parse      :   6.099
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.003
+Stage moar       :   0.000
+
+GTK::Adjustment compile time: 7.39764659
+ === GTK::CSSProvider === 
+Stage start      :   0.000
+Stage parse      :   6.093
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.015
+Stage moar       :   0.000
+
+GTK::CSSProvider compile time: 7.4841766
+ === GTK::Builder::MRO === 
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/MRO.pm6
+    Stage start      :   0.000
+    Stage parse      :   0.428
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.029
+    Stage mast       :   0.019
+    Stage mbc        :   0.002
+Stage parse      :   2.276
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.008
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+GTK::Builder::MRO compile time: 3.498918
+ === LibXML === 
+Stage start      :   0.000
+Stage parse      :   6.821
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.003
+Stage moar       :   0.000
+
+LibXML compile time: 8.63173299
+ === GTK::Widget === 
+Stage start      :   0.000
+Stage parse      :   7.368
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.001
+Stage mbc        :   0.010
+Stage moar       :   0.000
+
+GTK::Widget compile time: 9.04972109
+ === GTK::Window === 
+Stage start      :   0.000
+Stage parse      :   7.717
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.001
+Stage mbc        :   0.005
+Stage moar       :   0.000
+
+GTK::Window compile time: 9.40507187
+ === GTK::Application === 
+Stage start      :   0.000
+Stage parse      :   8.557
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.001
+Stage mbc        :   0.011
+Stage moar       :   0.000
+
+GTK::Application compile time: 10.18831027
+ === GTK::Builder::Base === 
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/Base.pm6
+    Stage start      :   0.000
+    Stage parse      :   1.393
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.028
+    Stage mast       :   0.055
+    Stage mbc        :   0.003
+Stage parse      :   2.810
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.002
+Stage mbc        :   0.000
+Stage moar       :   0.000
+
+GTK::Builder::Base compile time: 3.5596698
+ === GTK::Raw::Builder === 
+Stage start      :   0.000
+
+    precomp lib/GTK/Raw/Builder.pm6
+    Stage start      :   0.000
+    Stage parse      :   6.012
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.033
+    Stage mast       :   0.062
+    Stage mbc        :   0.056
+Stage parse      :  10.002
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+GTK::Raw::Builder compile time: 11.35024102
+ === GIO::Menu === 
+Stage start      :   0.000
+
+    precomp ../p6-GIO/lib/GIO/Menu.pm6
+    Stage start      :   0.000
+    
+        precomp ../p6-GIO/lib/GIO/Raw/Menu.pm6
+        Stage start      :   0.000
+        Stage parse      :   3.366
+        Stage syntaxcheck:   0.000
+        Stage ast        :   0.000
+        Stage optimize   :   0.043
+        Stage mast       :   0.075
+        Stage mbc        :   0.032
+    Stage parse      :   8.333
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.031
+    Stage mast       :   0.044
+    Stage mbc        :   0.018
+Stage parse      :  12.088
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.025
+Stage mbc        :   0.002
+Stage moar       :   0.000
+
+GIO::Menu compile time: 13.48660019
+ === GTK::Builder::MenuShell === 
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/MenuShell.pm6
+    Stage start      :   0.000
+    Stage parse      :   1.328
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.003
+    Stage mast       :   0.009
+    Stage mbc        :   0.001
+Stage parse      :   2.744
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.000
+Stage moar       :   0.000
+
+GTK::Builder::MenuShell compile time: 3.43494733
+ === GTK::Builder::ListBoxRow === 
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/ListBoxRow.pm6
+    Stage start      :   0.000
+    Stage parse      :   1.326
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.012
+    Stage mast       :   0.017
+    Stage mbc        :   0.001
+Stage parse      :   2.781
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.000
+Stage moar       :   0.000
+
+GTK::Builder::ListBoxRow compile time: 3.46375962
+ === GTK::Builder::Orientable === 
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/Orientable.pm6
+    Stage start      :   0.000
+    Stage parse      :   1.316
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.007
+    Stage mast       :   0.027
+    Stage mbc        :   0.002
+Stage parse      :   2.819
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.000
+Stage moar       :   0.000
+
+GTK::Builder::Orientable compile time: 3.55823539
+ === GTK::Builder::Widget === 
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/Widget.pm6
+    Stage start      :   0.000
+    Stage parse      :   1.394
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.025
+    Stage mast       :   0.035
+    Stage mbc        :   0.002
+Stage parse      :   2.833
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+GTK::Builder::Widget compile time: 3.56749594
+ === GTK::Builder::MenuButton === 
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/MenuButton.pm6
+    Stage start      :   0.000
+    Stage parse      :   1.361
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.011
+    Stage mast       :   0.034
+    Stage mbc        :   0.003
+Stage parse      :   2.870
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.000
+Stage moar       :   0.000
+
+GTK::Builder::MenuButton compile time: 3.67626854
+ === GTK::Builder::Box === 
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/Box.pm6
+    Stage start      :   0.000
+    Stage parse      :   1.320
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.013
+    Stage mast       :   0.045
+    Stage mbc        :   0.002
+Stage parse      :   2.835
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.000
+Stage moar       :   0.000
+
+GTK::Builder::Box compile time: 3.67691162
+ === GTK::Builder::Image === 
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/Image.pm6
+    Stage start      :   0.000
+    Stage parse      :   2.001
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.025
+    Stage mast       :   0.031
+    Stage mbc        :   0.002
+Stage parse      :   4.187
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.004
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+GTK::Builder::Image compile time: 5.30598579
+ === GTK::Builder::Frame === 
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/Frame.pm6
+    Stage start      :   0.000
+    Stage parse      :   2.113
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.022
+    Stage mast       :   0.074
+    Stage mbc        :   0.002
+Stage parse      :   4.218
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+GTK::Builder::Frame compile time: 5.44713523
+ === GTK::Builder::MenuItem === 
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/MenuItem.pm6
+    Stage start      :   0.000
+    Stage parse      :   2.042
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.010
+    Stage mast       :   0.024
+    Stage mbc        :   0.002
+Stage parse      :   4.212
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.004
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+GTK::Builder::MenuItem compile time: 5.5177664
+ === GTK::Builder::Actionable === 
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/Actionable.pm6
+    Stage start      :   0.000
+    Stage parse      :   2.173
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.008
+    Stage mast       :   0.034
+    Stage mbc        :   0.001
+Stage parse      :   4.374
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.004
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+GTK::Builder::Actionable compile time: 5.58091341
+ === GTK::Builder::Label === 
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/Label.pm6
+    Stage start      :   0.001
+    Stage parse      :   2.085
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.007
+    Stage mast       :   0.021
+    Stage mbc        :   0.003
+Stage parse      :   4.244
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.004
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+GTK::Builder::Label compile time: 5.59193139
+ === GTK::Builder::Revealer === 
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/Revealer.pm6
+    Stage start      :   0.000
+    Stage parse      :   2.058
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.015
+    Stage mast       :   0.064
+    Stage mbc        :   0.003
+Stage parse      :   4.277
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.000
+Stage moar       :   0.000
+
+GTK::Builder::Revealer compile time: 5.61346893
+ === GTK::Builder::LinkButton === 
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/LinkButton.pm6
+    Stage start      :   0.000
+    Stage parse      :   2.351
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.006
+    Stage mast       :   0.029
+    Stage mbc        :   0.001
+Stage parse      :   4.492
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.000
+Stage moar       :   0.000
+
+GTK::Builder::LinkButton compile time: 5.6900467
+ === GTK::Builder::Button === 
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/Button.pm6
+    Stage start      :   0.000
+    Stage parse      :   2.292
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.002
+    Stage optimize   :   0.008
+    Stage mast       :   0.023
+    Stage mbc        :   0.002
+Stage parse      :   4.425
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.000
+Stage moar       :   0.000
+
+GTK::Builder::Button compile time: 5.7111575
+ === GTK::Builder::ToggleButton === 
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/ToggleButton.pm6
+    Stage start      :   0.000
+    Stage parse      :   2.060
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.004
+    Stage mast       :   0.011
+    Stage mbc        :   0.001
+Stage parse      :   4.321
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.000
+Stage moar       :   0.000
+
+GTK::Builder::ToggleButton compile time: 5.72399923
+ === GTK::Builder::Menu === 
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/Menu.pm6
+    Stage start      :   0.000
+    Stage parse      :   2.073
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.005
+    Stage mast       :   0.022
+    Stage mbc        :   0.001
+Stage parse      :   4.317
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+GTK::Builder::Menu compile time: 5.77189171
+ === GTK::Builder::Window === 
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/Window.pm6
+    Stage start      :   0.000
+    Stage parse      :   2.207
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.009
+    Stage mast       :   0.032
+    Stage mbc        :   0.002
+Stage parse      :   4.693
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.000
+Stage moar       :   0.000
+
+GTK::Builder::Window compile time: 5.82883405
+ === GTK::Builder::Grid === 
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/Grid.pm6
+    Stage start      :   0.001
+    Stage parse      :   2.735
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.009
+    Stage mast       :   0.018
+    Stage mbc        :   0.001
+Stage parse      :   4.862
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.000
+Stage moar       :   0.000
+
+GTK::Builder::Grid compile time: 6.06629274
+ === GTK::Builder::Entry === 
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/Entry.pm6
+    Stage start      :   0.000
+    Stage parse      :   2.121
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.018
+    Stage mast       :   0.067
+    Stage mbc        :   0.003
+Stage parse      :   4.826
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+GTK::Builder::Entry compile time: 6.27415347
+ === GTK::BuilderWidgets === 
+Stage start      :   0.000
+
+    precomp lib/GTK/BuilderWidgets.pm6
+    Stage start      :   0.001
+    Stage parse      :   2.554
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.011
+    Stage mast       :   0.038
+    Stage mbc        :   0.002
+Stage parse      :   5.071
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+GTK::BuilderWidgets compile time: 6.35242394
+ === GTK === 
+Stage start      :   0.000
+Stage parse      :  20.326
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.038
+Stage moar       :   0.000
+
+GTK compile time: 21.8180429
+ === GTK::Builder === 
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder.pm6
+    Stage start      :   0.000
+    Stage parse      :  22.609
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.051
+    Stage mast       :   0.188
+    Stage mbc        :   0.158
+Stage parse      :  32.159
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.002
+Stage moar       :   0.000
+
+GTK::Builder compile time: 33.40005427
+
+Total compile time: 37.73470259s
