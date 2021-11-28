@@ -2,7 +2,6 @@ use v6.c;
 
 use Method::Also;
 use NativeCall;
-use LibXML;
 
 use Data::Dump::Tree;
 
@@ -19,6 +18,7 @@ use GTK::Application;
 use GTK::CSSProvider;
 use GTK::Widget;
 use GTK::Window;
+use GTK::Builder::Subs;
 use GTK::Builder::Registry;
 
 use GLib::Roles::Object;
@@ -36,8 +36,6 @@ role Origin {
     $!origin = $o;
   }
 }
-
-my %staticCounters;
 
 class GTK::Builder does Associative {
   also does GLib::Roles::Object;
@@ -63,6 +61,7 @@ class GTK::Builder does Associative {
 
   submethod BUILD(
     :$builder!,
+    :$identity,
     :$pod,
     :$ui,
     :$window-name,
@@ -108,6 +107,11 @@ class GTK::Builder does Associative {
 # ERR
     }
 
+    # If using the identity constructor, we must populate %!widgets
+    if $identity {
+      %!widgets{ .name } = $_ for self.get_objects;
+    }
+
   }
 
   method GTK::Raw::Definitions::GtkBuilder
@@ -120,11 +124,8 @@ class GTK::Builder does Associative {
   multi method new (GtkBuilder $builder, :$ref = True) {
     return Nil unless $builder;
 
-    my $o = self.bless(:$builder);
+    my $o = self.bless(:$builder, :identity);
     $o.ref if $ref;
-
-    # XXX - Perform analysis on builder object and fill in missing data!!
-
     $o;
   }
   multi method new (
@@ -162,9 +163,6 @@ class GTK::Builder does Associative {
   {
     # cw: Consider parsing this using a proper XML parser so
     #     we can use a subset of the passed XML.
-
-    # If requested, find serial markers and replace it with a digit and increment
-    $ui ~~ s:g/(\w+)'%s'/{ $0 }{ %staticCounters{$0 // ''}++ }/;
 
     die '$length must not be negative' unless $length > -2;
     my gssize $l = $length;
@@ -219,31 +217,9 @@ class GTK::Builder does Associative {
   ) {
     my %opts;
 
-    given $template {
-      when IO::Path              { %opts<location> = $template.absolute }
-      when IO::Handle            { %opts<io>       = $template }
-
-      when Str {
-        %opts{ $url ?? 'location' !! 'string' } = $template
-      }
-    }
-
-    my $dom = LibXML.parse(|%opts);
-    # For parsing, we first change all <template> to <object>
-    # For now... should only be one.
-    if $dom.find('//template')[0] -> $t {
-      # Rename the node from 'template' to 'object';
-      $t.name = 'object';
-      # It's id will become its class will appended serial.
-      $t.setAttribute('id', $t.getAttribute('class') ~ '%s');
-      # It's class will then become its parent.
-      $t.setAttribute( 'class', $t.getAttribute('parent') );
-      # Remove parent
-      $t.removeAttribute('parent');
-    }
-    &dom-callback($dom) if &dom-callback;
-
-    ~$dom;
+    %opts<url>          = $url;
+    %opts<dom-callback> = &dom-callback;
+    prepTemplate(%$template, |%opts, :serial);
   }
 
   method AT-KEY(Str $key) {
@@ -343,6 +319,7 @@ class GTK::Builder does Associative {
            # related issues, like container storage situations.
           ::( $at ).new($o, $args.pairs);
         }
+
         default {
           CATCH {
             default { note($_) }
@@ -352,9 +329,18 @@ class GTK::Builder does Associative {
           ::($ = $at).new($o);
         }
       }
+
     }
 
-
+    # cw: Duplication of work?
+    #
+    # cw: -XXX- In case the object representation is lost, widget data
+    #     should be assigned to the pointer's qData so it can be recovered,
+    #     later.
+    # self.set-data(
+    #   "widget-{ $_ }:{ %!widgets{$_}.objectType.name }",
+    #   %!widgets{$_}.GtkWidget.p
+    # );
 
     #ddt %!widgets;
   }

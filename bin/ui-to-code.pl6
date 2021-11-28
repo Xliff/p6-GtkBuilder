@@ -1,5 +1,9 @@
 use v6.c;
 
+use GTK::Builder::Subs;
+
+use GTK::BuilderWidgets;
+
 #use lib <t .>;
 #use ui_to_code;
 #use Grammar::Tracer;
@@ -71,12 +75,12 @@ grammar BuilderGrammar {
     <[A..Za..z0..9_\-\+\.]>+
   }
   token value {
-    <[A..Za..z0..9_:\-\.\@\/\&\;] + :space>+
+    <[A..Za..z0..9_\:\-\.\,\@\/\=\&\;\"]+ :space>+
   }
 }
 
 class BuilderActions {
-  method !buildAttr($match) {
+  method !buildAttr ($match) {
     my %attrs;
     return {} without $match || $match<attr>;
     %attrs.append($_.made) for $match<attr>.List;
@@ -86,7 +90,7 @@ class BuilderActions {
     };
   }
 
-  method TOP($/) {
+  method TOP ($/) {
     my @items;
     for $/<pieces>.List {
       my $obj;
@@ -103,7 +107,7 @@ class BuilderActions {
     make @items;
   }
 
-  method object($/) {
+  method object ($/) {
     state %collider;
 
     my $attrs = self!buildAttr($/);
@@ -134,7 +138,7 @@ class BuilderActions {
   }
 
   # Is this right?
-  method template($/) {
+  method template ($/) {
     my $attrs = self!buildAttr($/);
     my @children;
     for $/<child>.List {
@@ -147,13 +151,14 @@ class BuilderActions {
       children => @children.Array
     };
   }
-  method child($/) {
+
+  method child ($/) {
     my %attrs = self!buildAttr($/);
     my (%object, %packing);
     for (%object, %packing) -> $hash {
       my $hname = $hash.name.substr(1);
       next unless $/{$hname}.defined;
-      $hash.append($_.made.pairs) for $/{$hname};
+      $hash.append( .made.pairs ) for $/{$hname};
     }
     make {
       attributes => %attrs,
@@ -161,18 +166,21 @@ class BuilderActions {
       packing    => %packing
     };
   }
-  method attributes($/) {
+
+  method attributes ($/) {
     my %attrs = self!buildAttr($_) for $/<attribute>.List;
     make {
       %attrs<name> => %attrs<attrs><val>
     };
   }
-  method packing($/) {
+
+  method packing ($/) {
     my %pack;
-    %pack.append($_.made.pairs) for $/<property>.List;
+    %pack.append( .made.pairs ) for $/<property>.List;
     make %pack;
   }
-  method property($/) {
+
+  method property ($/) {
     my $attrs = self!buildAttr($/);
     my $extras = %( $attrs<attrs>.pairs.grep( *.key ne 'name' ) );
     if $extras.elems {
@@ -188,19 +196,19 @@ class BuilderActions {
       }
     }
   }
-  method style($/) {
+
+  method style ($/) {
     make {
       class => $/<attr>.made.value
     };
   }
-  method attr($/) {
+
+  method attr ($/) {
     make $/<name>.Str => $/<val>.Str;
   }
 }
 
 sub MAIN($filename) {
-  use GTK::BuilderWidgets;
-
   my $contents;
   if $filename ne '-' {
     die "Cannot find file '$filename'.\n" unless $filename.IO.e;
@@ -208,8 +216,19 @@ sub MAIN($filename) {
   } else {
     $contents = slurp;
   }
+  $contents = prepTemplate($contents, :serial);
+
   my $bw = GTK::BuilderWidgets.new(var => 'b');
+  without $bw {
+    say 'Cannot continue witout working GTK::BuilderWidgets instance!';
+    exit;
+  }
+
   my $p = BuilderGrammar.parse($contents, actions => BuilderActions);
+  without $p {
+    say 'Could not parse UI file!';
+    exit;
+  }
 
   say $bw.get-code-list($p.made).join("\n");
 }
