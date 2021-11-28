@@ -2,7 +2,7 @@ use v6.c;
 
 use GTK::Builder::Widget;
 
-class GTK::Builder::Grid is GTK::Builder::Widget {
+class GTK::Builder::Grid is GTK::Builder::Widget does GTK::Builder::Role {
   my @attributes = <
     baseline-row
     column-homogeneous
@@ -32,10 +32,10 @@ class GTK::Builder::Grid is GTK::Builder::Widget {
       my $attach = qq:to/ATTACH/.chomp;
 { sprintf($v, $o<id>) }.attach(
 { sprintf($v, $_<objects><id>) },
-  { $_<packing><left-attach> // 0 },
-  { $_<packing><top-attach>  // 0 },
-  { $_<packing><width>       // 1 },
-  { $_<packing><height>      // 1 }
+  { .<packing><left-attach> // .<packing><left_attach> // 0 },
+  { .<packing><top-attach>  // .<packing><top_attach>  // 0 },
+  { .<packing><width>       //                            1 },
+  { .<packing><height>      //                            1 }
 );
 ATTACH
 
