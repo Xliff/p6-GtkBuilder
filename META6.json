@@ -1,7 +1,8 @@
 {
     "depends": [
 	    "LibXML",
-	    "p6-GtkPlus"
+	    "p6-GtkPlus",
+            "Pluggable"
     ],
     "description": "GtkBuilder support for p6-GtkPlus",
     "version": "r0.2",
@@ -19,23 +20,25 @@
       "GTK::Builder::MRO"           :  "lib/GTK/Builder/MRO.pm6"          ,
       "GTK::Builder::Base"          :  "lib/GTK/Builder/Base.pm6"         ,
       "GTK::Builder::Box"           :  "lib/GTK/Builder/Box.pm6"          ,
+      "GTK::Builder::ListBoxRow"    :  "lib/GTK/Builder/ListBoxRow.pm6"   ,
+      "GTK::Builder::MenuButton"    :  "lib/GTK/Builder/MenuButton.pm6"   ,
+      "GTK::Builder::MenuShell"     :  "lib/GTK/Builder/MenuShell.pm6"    ,
+      "GTK::Builder::Orientable"    :  "lib/GTK/Builder/Orientable.pm6"   ,
+      "GTK::Builder::Widget"        :  "lib/GTK/Builder/Widget.pm6"       ,
+      "GTK::Builder::Window"        :  "lib/GTK/Builder/Window.pm6"       ,
+      "GTK::BuilderWidgets"         :  "lib/GTK/BuilderWidgets.pm6"       ,
+      "GTK::Builder::Actionable"    :  "lib/GTK/Builder/Actionable.pm6"   ,
       "GTK::Builder::Button"        :  "lib/GTK/Builder/Button.pm6"       ,
+      "GTK::Builder::Entry"         :  "lib/GTK/Builder/Entry.pm6"        ,
       "GTK::Builder::Frame"         :  "lib/GTK/Builder/Frame.pm6"        ,
       "GTK::Builder::Grid"          :  "lib/GTK/Builder/Grid.pm6"         ,
       "GTK::Builder::Image"         :  "lib/GTK/Builder/Image.pm6"        ,
       "GTK::Builder::Label"         :  "lib/GTK/Builder/Label.pm6"        ,
       "GTK::Builder::LinkButton"    :  "lib/GTK/Builder/LinkButton.pm6"   ,
-      "GTK::Builder::ListBoxRow"    :  "lib/GTK/Builder/ListBoxRow.pm6"   ,
       "GTK::Builder::Menu"          :  "lib/GTK/Builder/Menu.pm6"         ,
-      "GTK::Builder::MenuButton"    :  "lib/GTK/Builder/MenuButton.pm6"   ,
       "GTK::Builder::MenuItem"      :  "lib/GTK/Builder/MenuItem.pm6"     ,
-      "GTK::Builder::MenuShell"     :  "lib/GTK/Builder/MenuShell.pm6"    ,
-      "GTK::Builder::Orientable"    :  "lib/GTK/Builder/Orientable.pm6"   ,
       "GTK::Builder::Revealer"      :  "lib/GTK/Builder/Revealer.pm6"     ,
-      "GTK::Builder::ToggleButton"  :  "lib/GTK/Builder/ToggleButton.pm6" ,
-      "GTK::Builder::Widget"        :  "lib/GTK/Builder/Widget.pm6"       ,
-      "GTK::BuilderWidgets"         :  "lib/GTK/BuilderWidgets.pm6"       ,
-      "GTK::Builder::Actionable"    :  "lib/GTK/Builder/Actionable.pm6"   
+      "GTK::Builder::ToggleButton"  :  "lib/GTK/Builder/ToggleButton.pm6" 
     },
     "name": "P6-GtkBuilder",
     "perl": "6.c",
