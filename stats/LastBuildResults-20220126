@@ -1,11 +1,11 @@
 Dependency Generation
 =====================
-real 0.92
-user 1.41
-sys 0.08
+real 0.90
+user 1.38
+sys 0.03
  === Data::Dump::Tree === (1/44)
 Stage start      :   0.000
-Stage parse      :   1.544
+Stage parse      :   1.449
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.001
@@ -14,177 +14,79 @@ Stage mbc        :   0.001
 Stage moar       :   0.000
  === GIO::Menu === (2/44)
 Stage start      :   0.000
-Stage parse      :   2.305
+Stage parse      :   2.150
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.003
+Stage moar       :   0.000
+ === GLib::GSList === (3/44)
+Stage start      :   0.000
+Stage parse      :   1.721
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GLib::Roles::Object === (4/44)
+Stage start      :   0.000
+Stage parse      :   1.915
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.002
+Stage moar       :   0.000
+ === GTK === (5/44)
+Stage start      :   0.000
+Stage parse      :  11.037
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.039
+Stage moar       :   0.000
+ === GTK::Adjustment === (6/44)
+Stage start      :   0.000
+Stage parse      :   2.388
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.000
 Stage mast       :   0.002
 Stage mbc        :   0.004
 Stage moar       :   0.000
- === GLib::GSList === (3/44)
-Stage start      :   0.000
-Stage parse      :   1.751
-Stage syntaxcheck:   0.000
-Stage ast        :   0.000
-Stage optimize   :   0.001
-Stage mast       :   0.002
-Stage mbc        :   0.002
-Stage moar       :   0.000
- === GLib::Roles::Object === (4/44)
-Stage start      :   0.000
-Stage parse      :   1.905
-Stage syntaxcheck:   0.000
-Stage ast        :   0.000
-Stage optimize   :   0.001
-Stage mast       :   0.002
-Stage mbc        :   0.003
-Stage moar       :   0.000
- === GTK === (5/44)
-Stage start      :   0.000
-
-    precomp ../p6-GtkPlus/lib/GTK.pm6
-    Stage start      :   0.000
-    
-        precomp ../p6-GtkPlus/lib/GTK/Entry.pm6
-        Stage start      :   0.000
-        
-            precomp ../p6-GtkPlus/lib/GTK/EntryBuffer.pm6
-            Stage start      :   0.000
-            Stage parse      :   3.169
-            Stage syntaxcheck:   0.000
-            Stage ast        :   0.000
-            Stage optimize   : [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer)
-            Calling gtk_entry_buffer_set_max_length(GTK::Raw::Definitions::GtkEntryBuffer, uint) will never work with declared signature (GTK::Raw::Definitions::GtkEntryBuffer $buffer, int32 $max_length)
-            at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer):63
-            ------> [32m        [33m⏏[31mgtk_entry_buffer_set_max_length($!b, $m)[0m
-        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/Entry.pm6 (GTK::Entry)
-        Stage start      :   0.000
-        Stage parse      :   3.169
-        Stage syntaxcheck:   0.000
-        Stage ast        :   0.000
-        Stage optimize   : [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer)
-        Calling gtk_entry_buffer_set_max_length(GTK::Raw::Definitions::GtkEntryBuffer, uint) will never work with declared signature (GTK::Raw::Definitions::GtkEntryBuffer $buffer, int32 $max_length)
-        at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer):63
-        ------> [32m        [33m⏏[31mgtk_entry_buffer_set_max_length($!b, $m)[0m
-        
-        at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/Entry.pm6 (GTK::Entry):14
-    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK.pm6 (GTK)
-    Stage start      :   0.000
-    
-        precomp ../p6-GtkPlus/lib/GTK/EntryBuffer.pm6
-        Stage start      :   0.000
-        Stage parse      :   3.169
-        Stage syntaxcheck:   0.000
-        Stage ast        :   0.000
-        Stage optimize   : [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer)
-        Calling gtk_entry_buffer_set_max_length(GTK::Raw::Definitions::GtkEntryBuffer, uint) will never work with declared signature (GTK::Raw::Definitions::GtkEntryBuffer $buffer, int32 $max_length)
-        at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer):63
-        ------> [32m        [33m⏏[31mgtk_entry_buffer_set_max_length($!b, $m)[0m
-    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/Entry.pm6 (GTK::Entry)
-    Stage start      :   0.000
-    Stage parse      :   3.169
-    Stage syntaxcheck:   0.000
-    Stage ast        :   0.000
-    Stage optimize   : [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer)
-    Calling gtk_entry_buffer_set_max_length(GTK::Raw::Definitions::GtkEntryBuffer, uint) will never work with declared signature (GTK::Raw::Definitions::GtkEntryBuffer $buffer, int32 $max_length)
-    at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer):63
-    ------> [32m        [33m⏏[31mgtk_entry_buffer_set_max_length($!b, $m)[0m
-    
-    at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/Entry.pm6 (GTK::Entry):14
-    
-    at /home/cbwood/Projects/p6-GtkPlus/lib/GTK.pm6 (GTK):20
-[31m===[0mSORRY![31m===[0m Error while compiling -e
-Stage start      :   0.000
-
-    precomp ../p6-GtkPlus/lib/GTK/Entry.pm6
-    Stage start      :   0.000
-    
-        precomp ../p6-GtkPlus/lib/GTK/EntryBuffer.pm6
-        Stage start      :   0.000
-        Stage parse      :   3.169
-        Stage syntaxcheck:   0.000
-        Stage ast        :   0.000
-        Stage optimize   : [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer)
-        Calling gtk_entry_buffer_set_max_length(GTK::Raw::Definitions::GtkEntryBuffer, uint) will never work with declared signature (GTK::Raw::Definitions::GtkEntryBuffer $buffer, int32 $max_length)
-        at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer):63
-        ------> [32m        [33m⏏[31mgtk_entry_buffer_set_max_length($!b, $m)[0m
-    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/Entry.pm6 (GTK::Entry)
-    Stage start      :   0.000
-    Stage parse      :   3.169
-    Stage syntaxcheck:   0.000
-    Stage ast        :   0.000
-    Stage optimize   : [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer)
-    Calling gtk_entry_buffer_set_max_length(GTK::Raw::Definitions::GtkEntryBuffer, uint) will never work with declared signature (GTK::Raw::Definitions::GtkEntryBuffer $buffer, int32 $max_length)
-    at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer):63
-    ------> [32m        [33m⏏[31mgtk_entry_buffer_set_max_length($!b, $m)[0m
-    
-    at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/Entry.pm6 (GTK::Entry):14
-[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK.pm6 (GTK)
-Stage start      :   0.000
-
-    precomp ../p6-GtkPlus/lib/GTK/EntryBuffer.pm6
-    Stage start      :   0.000
-    Stage parse      :   3.169
-    Stage syntaxcheck:   0.000
-    Stage ast        :   0.000
-    Stage optimize   : [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer)
-    Calling gtk_entry_buffer_set_max_length(GTK::Raw::Definitions::GtkEntryBuffer, uint) will never work with declared signature (GTK::Raw::Definitions::GtkEntryBuffer $buffer, int32 $max_length)
-    at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer):63
-    ------> [32m        [33m⏏[31mgtk_entry_buffer_set_max_length($!b, $m)[0m
-[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/Entry.pm6 (GTK::Entry)
-Stage start      :   0.000
-Stage parse      :   3.169
-Stage syntaxcheck:   0.000
-Stage ast        :   0.000
-Stage optimize   : [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer)
-Calling gtk_entry_buffer_set_max_length(GTK::Raw::Definitions::GtkEntryBuffer, uint) will never work with declared signature (GTK::Raw::Definitions::GtkEntryBuffer $buffer, int32 $max_length)
-at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer):63
-------> [32m        [33m⏏[31mgtk_entry_buffer_set_max_length($!b, $m)[0m
-
-at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/Entry.pm6 (GTK::Entry):14
-
-at /home/cbwood/Projects/p6-GtkPlus/lib/GTK.pm6 (GTK):20
-
-at -e:1
- === GTK::Adjustment === (6/44)
-Stage start      :   0.000
-Stage parse      :   2.623
-Stage syntaxcheck:   0.000
-Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.003
-Stage moar       :   0.000
  === GTK::Application === (7/44)
 Stage start      :   0.000
-Stage parse      :   4.665
+Stage parse      :   4.432
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.000
 Stage mast       :   0.001
-Stage mbc        :   0.010
+Stage mbc        :   0.009
 Stage moar       :   0.000
  === GTK::CSSProvider === (8/44)
 Stage start      :   0.000
-Stage parse      :   2.826
+Stage parse      :   2.617
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.000
 Stage mast       :   0.001
-Stage mbc        :   0.005
+Stage mbc        :   0.004
 Stage moar       :   0.000
  === GTK::Raw::Enums === (9/44)
 Stage start      :   0.000
-Stage parse      :   1.525
+Stage parse      :   1.457
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.014
-Stage mast       :   0.007
+Stage optimize   :   0.005
+Stage mast       :   0.006
 Stage mbc        :   0.003
 Stage moar       :   0.000
  === GTK::Raw::Subs === (10/44)
 Stage start      :   0.000
-Stage parse      :   1.555
+Stage parse      :   1.496
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.001
@@ -193,34 +95,25 @@ Stage mbc        :   0.001
 Stage moar       :   0.000
  === GTK::Raw::Types === (11/44)
 Stage start      :   0.000
-Stage parse      :   2.403
+Stage parse      :   2.286
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.020
-Stage mast       :   0.012
-Stage mbc        :   0.016
+Stage mast       :   0.011
+Stage mbc        :   0.015
 Stage moar       :   0.000
  === GTK::TypeClass === (12/44)
 Stage start      :   0.000
-
-    precomp ../p6-GtkPlus/lib/GTK/TypeClass.pm6
-    Stage start      :   0.000
-    Stage parse      :   0.209
-    Stage syntaxcheck:   0.000
-    Stage ast        :   0.000
-    Stage optimize   :   0.016
-    Stage mast       :   0.020
-    Stage mbc        :   0.002
-Stage parse      :   1.697
+Stage parse      :   1.224
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.004
+Stage optimize   :   0.002
 Stage mast       :   0.006
 Stage mbc        :   0.001
 Stage moar       :   0.000
  === GTK::Widget === (13/44)
 Stage start      :   0.000
-Stage parse      :   3.571
+Stage parse      :   3.401
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.000
@@ -229,7 +122,7 @@ Stage mbc        :   0.005
 Stage moar       :   0.000
  === GTK::Window === (14/44)
 Stage start      :   0.000
-Stage parse      :   3.970
+Stage parse      :   3.740
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.000
@@ -238,64 +131,16 @@ Stage mbc        :   0.008
 Stage moar       :   0.000
  === LibXML === (15/44)
 Stage start      :   0.000
-
-    precomp ../rakudobrew/versions/moar-blead/install/share/perl6/site/sources/9BF7A6A9DE51AA08D6688B987F74493FB158CEB0
-    Stage start      :   0.000
-    
-        precomp ../rakudobrew/versions/moar-blead/install/share/perl6/site/sources/4697609A761BAB3AAB911017642155EDA41449C4
-        Stage start      :   0.001
-        
-            precomp ../rakudobrew/versions/moar-blead/install/share/perl6/site/sources/8ED900BB0264BC193800C11EEEF1C4B9D85CCA8A
-            Stage start      :   0.000
-            Stage parse      :   3.350
-            Stage syntaxcheck:   0.000
-            Stage ast        :   0.000
-            Stage optimize   :   0.015
-            Stage mast       :   0.028
-            Stage mbc        :   0.009
-        Stage parse      :   7.782
-        Stage syntaxcheck:   0.000
-        Stage ast        :   0.000
-        Stage optimize   :   0.049
-        Stage mast       :   0.080
-        Stage mbc        :   0.094
-    
-        precomp ../rakudobrew/versions/moar-blead/install/share/perl6/site/sources/8F231E8926259B6670858C9628BA934C5B645F28
-        Stage start      :   0.000
-        
-            precomp ../rakudobrew/versions/moar-blead/install/share/perl6/site/sources/F7A3F1BCEB0135F6E1CB10B945F64DB3BA5290EE
-            Stage start      :   0.000
-            Stage parse      :   2.602
-            Stage syntaxcheck:   0.000
-            Stage ast        :   0.000
-            Stage optimize   :   0.024
-            Stage mast       :   0.039
-            Stage mbc        :   0.005
-        Stage parse      :   6.852
-        Stage syntaxcheck:   0.000
-        Stage ast        :   0.000
-        Stage optimize   :   0.062
-        Stage mast       :   0.162
-        Stage mbc        :   0.010
-    Stage parse      :  17.387
-    Stage syntaxcheck:   0.000
-    Stage ast        :   0.000
-    Stage optimize   :   0.011
-    Stage mast       :   0.033
-    Stage mbc        :   0.003
-R: LibXML::_Options[Hash]
-Stage parse      :  19.084
+Stage parse      :   2.694
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.002
-Stage mast       :   0.007
-Stage mbc        :   0.001
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.005
 Stage moar       :   0.000
-R: LibXML::HashMap::Assoc[LibXML::Node::Set]
-R: Iterable
  === Method::Also === (16/44)
 Stage start      :   0.000
-Stage parse      :   1.318
+Stage parse      :   1.220
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.002
@@ -304,47 +149,20 @@ Stage mbc        :   0.001
 Stage moar       :   0.000
  === NativeCall === (17/44)
 Stage start      :   0.000
-Stage parse      :   1.438
+Stage parse      :   1.409
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.001
-Stage mast       :   0.002
+Stage mast       :   0.014
 Stage mbc        :   0.001
 Stage moar       :   0.000
  === Pluggable === (18/44)
 Stage start      :   0.000
-
-    precomp ../rakudobrew/versions/moar-blead/install/share/perl6/site/sources/FD2D9910CC49775E667AFE64E685EC90A6F3BFD7
-    Stage start      :   0.000
-    
-        precomp ../rakudobrew/versions/moar-blead/install/share/perl6/site/sources/EA6CA341123ECF37C6657DBCBE16F4B077343BB6
-        Stage start      :   0.000
-        Stage parse      :   0.795
-        Stage syntaxcheck:   0.000
-        Stage ast        :   0.000
-        Stage optimize   :   0.054
-        Stage mast       :   0.083
-        Stage mbc        :   0.004
-    
-        precomp ../rakudobrew/versions/moar-blead/install/share/perl6/site/sources/3904DB76D93B9C4019D705B1969972596F599DE0
-        Stage start      :   0.000
-        Stage parse      :   0.314
-        Stage syntaxcheck:   0.000
-        Stage ast        :   0.000
-        Stage optimize   :   0.018
-        Stage mast       :   0.032
-        Stage mbc        :   0.002
-    Stage parse      :   3.126
-    Stage syntaxcheck:   0.000
-    Stage ast        :   0.000
-    Stage optimize   :   0.017
-    Stage mast       :   0.025
-    Stage mbc        :   0.004
-Stage parse      :   4.638
+Stage parse      :   1.326
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.002
-Stage mast       :   0.007
+Stage optimize   :   0.001
+Stage mast       :   0.002
 Stage mbc        :   0.001
 Stage moar       :   0.000
  === GTK::Raw::Builder === (19/44)
@@ -352,290 +170,73 @@ Stage start      :   0.000
 
     precomp lib/GTK/Raw/Builder.pm6
     Stage start      :   0.000
-    Stage parse      :   4.315
+    Stage parse      :   4.098
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.031
-    Stage mast       :   0.042
-    Stage mbc        :   0.081
-Stage parse      :   6.117
+    Stage optimize   :   0.028
+    Stage mast       :   0.041
+    Stage mbc        :   0.073
+Stage parse      :   6.626
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.002
-Stage mast       :   0.004
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.001
+Stage mbc        :   0.003
 Stage moar       :   0.000
  === GTK::Builder::Subs === (20/44)
 Stage start      :   0.000
-
-    precomp lib/GTK/Builder/Subs.pm6
-    Stage start      :   0.000
-    Stage parse      :   1.619
-    Stage syntaxcheck:   0.000
-    Stage ast        :   0.000
-    Stage optimize   :   0.013
-    Stage mast       :   0.035
-    Stage mbc        :   0.002
-Stage parse      :   3.368
+Stage parse      :   2.585
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.002
-Stage mast       :   0.012
+Stage optimize   :   0.000
+Stage mast       :   0.001
 Stage mbc        :   0.002
 Stage moar       :   0.000
  === GTK::Builder::Registry === (21/44)
 Stage start      :   0.000
-
-    precomp lib/GTK/Builder/Registry.pm6
-    Stage start      :   0.000
-    Stage parse      :   1.382
-    Stage syntaxcheck:   0.000
-    Stage ast        :   0.000
-    Stage optimize   :   0.005
-    Stage mast       :   0.010
-    Stage mbc        :   0.001
-Stage parse      :   2.813
+Stage parse      :   1.295
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.002
-Stage mast       :   0.007
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === GTK::Builder === (22/44)
 Stage start      :   0.000
 
     precomp lib/GTK/Builder.pm6
     Stage start      :   0.000
-    
-        precomp ../p6-GtkPlus/lib/GTK.pm6
-        Stage start      :   0.000
-        
-            precomp ../p6-GtkPlus/lib/GTK/Entry.pm6
-            Stage start      :   0.000
-            
-                precomp ../p6-GtkPlus/lib/GTK/EntryBuffer.pm6
-                Stage start      :   0.000
-                Stage parse      :   3.238
-                Stage syntaxcheck:   0.000
-                Stage ast        :   0.000
-                Stage optimize   : [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer)
-                Calling gtk_entry_buffer_set_max_length(GTK::Raw::Definitions::GtkEntryBuffer, uint) will never work with declared signature (GTK::Raw::Definitions::GtkEntryBuffer $buffer, int32 $max_length)
-                at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer):63
-                ------> [32m        [33m⏏[31mgtk_entry_buffer_set_max_length($!b, $m)[0m
-            [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/Entry.pm6 (GTK::Entry)
-            Stage start      :   0.000
-            Stage parse      :   3.238
-            Stage syntaxcheck:   0.000
-            Stage ast        :   0.000
-            Stage optimize   : [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer)
-            Calling gtk_entry_buffer_set_max_length(GTK::Raw::Definitions::GtkEntryBuffer, uint) will never work with declared signature (GTK::Raw::Definitions::GtkEntryBuffer $buffer, int32 $max_length)
-            at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer):63
-            ------> [32m        [33m⏏[31mgtk_entry_buffer_set_max_length($!b, $m)[0m
-            
-            at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/Entry.pm6 (GTK::Entry):14
-        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK.pm6 (GTK)
-        Stage start      :   0.000
-        
-            precomp ../p6-GtkPlus/lib/GTK/EntryBuffer.pm6
-            Stage start      :   0.000
-            Stage parse      :   3.238
-            Stage syntaxcheck:   0.000
-            Stage ast        :   0.000
-            Stage optimize   : [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer)
-            Calling gtk_entry_buffer_set_max_length(GTK::Raw::Definitions::GtkEntryBuffer, uint) will never work with declared signature (GTK::Raw::Definitions::GtkEntryBuffer $buffer, int32 $max_length)
-            at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer):63
-            ------> [32m        [33m⏏[31mgtk_entry_buffer_set_max_length($!b, $m)[0m
-        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/Entry.pm6 (GTK::Entry)
-        Stage start      :   0.000
-        Stage parse      :   3.238
-        Stage syntaxcheck:   0.000
-        Stage ast        :   0.000
-        Stage optimize   : [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer)
-        Calling gtk_entry_buffer_set_max_length(GTK::Raw::Definitions::GtkEntryBuffer, uint) will never work with declared signature (GTK::Raw::Definitions::GtkEntryBuffer $buffer, int32 $max_length)
-        at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer):63
-        ------> [32m        [33m⏏[31mgtk_entry_buffer_set_max_length($!b, $m)[0m
-        
-        at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/Entry.pm6 (GTK::Entry):14
-        
-        at /home/cbwood/Projects/p6-GtkPlus/lib/GTK.pm6 (GTK):20
-    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkBuilder/lib/GTK/Builder.pm6 (GTK::Builder)
-    Stage start      :   0.000
-    
-        precomp ../p6-GtkPlus/lib/GTK/Entry.pm6
-        Stage start      :   0.000
-        
-            precomp ../p6-GtkPlus/lib/GTK/EntryBuffer.pm6
-            Stage start      :   0.000
-            Stage parse      :   3.238
-            Stage syntaxcheck:   0.000
-            Stage ast        :   0.000
-            Stage optimize   : [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer)
-            Calling gtk_entry_buffer_set_max_length(GTK::Raw::Definitions::GtkEntryBuffer, uint) will never work with declared signature (GTK::Raw::Definitions::GtkEntryBuffer $buffer, int32 $max_length)
-            at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer):63
-            ------> [32m        [33m⏏[31mgtk_entry_buffer_set_max_length($!b, $m)[0m
-        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/Entry.pm6 (GTK::Entry)
-        Stage start      :   0.000
-        Stage parse      :   3.238
-        Stage syntaxcheck:   0.000
-        Stage ast        :   0.000
-        Stage optimize   : [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer)
-        Calling gtk_entry_buffer_set_max_length(GTK::Raw::Definitions::GtkEntryBuffer, uint) will never work with declared signature (GTK::Raw::Definitions::GtkEntryBuffer $buffer, int32 $max_length)
-        at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer):63
-        ------> [32m        [33m⏏[31mgtk_entry_buffer_set_max_length($!b, $m)[0m
-        
-        at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/Entry.pm6 (GTK::Entry):14
-    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK.pm6 (GTK)
-    Stage start      :   0.000
-    
-        precomp ../p6-GtkPlus/lib/GTK/EntryBuffer.pm6
-        Stage start      :   0.000
-        Stage parse      :   3.238
-        Stage syntaxcheck:   0.000
-        Stage ast        :   0.000
-        Stage optimize   : [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer)
-        Calling gtk_entry_buffer_set_max_length(GTK::Raw::Definitions::GtkEntryBuffer, uint) will never work with declared signature (GTK::Raw::Definitions::GtkEntryBuffer $buffer, int32 $max_length)
-        at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer):63
-        ------> [32m        [33m⏏[31mgtk_entry_buffer_set_max_length($!b, $m)[0m
-    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/Entry.pm6 (GTK::Entry)
-    Stage start      :   0.000
-    Stage parse      :   3.238
+    Stage parse      :  22.584
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   : [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer)
-    Calling gtk_entry_buffer_set_max_length(GTK::Raw::Definitions::GtkEntryBuffer, uint) will never work with declared signature (GTK::Raw::Definitions::GtkEntryBuffer $buffer, int32 $max_length)
-    at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer):63
-    ------> [32m        [33m⏏[31mgtk_entry_buffer_set_max_length($!b, $m)[0m
-    
-    at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/Entry.pm6 (GTK::Entry):14
-    
-    at /home/cbwood/Projects/p6-GtkPlus/lib/GTK.pm6 (GTK):20
-    
-    at /home/cbwood/Projects/p6-GtkBuilder/lib/GTK/Builder.pm6 (GTK::Builder):15
-[31m===[0mSORRY![31m===[0m Error while compiling -e
-Stage start      :   0.000
-
-    precomp ../p6-GtkPlus/lib/GTK.pm6
-    Stage start      :   0.000
-    
-        precomp ../p6-GtkPlus/lib/GTK/Entry.pm6
-        Stage start      :   0.000
-        
-            precomp ../p6-GtkPlus/lib/GTK/EntryBuffer.pm6
-            Stage start      :   0.000
-            Stage parse      :   3.238
-            Stage syntaxcheck:   0.000
-            Stage ast        :   0.000
-            Stage optimize   : [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer)
-            Calling gtk_entry_buffer_set_max_length(GTK::Raw::Definitions::GtkEntryBuffer, uint) will never work with declared signature (GTK::Raw::Definitions::GtkEntryBuffer $buffer, int32 $max_length)
-            at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer):63
-            ------> [32m        [33m⏏[31mgtk_entry_buffer_set_max_length($!b, $m)[0m
-        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/Entry.pm6 (GTK::Entry)
-        Stage start      :   0.000
-        Stage parse      :   3.238
-        Stage syntaxcheck:   0.000
-        Stage ast        :   0.000
-        Stage optimize   : [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer)
-        Calling gtk_entry_buffer_set_max_length(GTK::Raw::Definitions::GtkEntryBuffer, uint) will never work with declared signature (GTK::Raw::Definitions::GtkEntryBuffer $buffer, int32 $max_length)
-        at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer):63
-        ------> [32m        [33m⏏[31mgtk_entry_buffer_set_max_length($!b, $m)[0m
-        
-        at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/Entry.pm6 (GTK::Entry):14
-    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK.pm6 (GTK)
-    Stage start      :   0.000
-    
-        precomp ../p6-GtkPlus/lib/GTK/EntryBuffer.pm6
-        Stage start      :   0.000
-        Stage parse      :   3.238
-        Stage syntaxcheck:   0.000
-        Stage ast        :   0.000
-        Stage optimize   : [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer)
-        Calling gtk_entry_buffer_set_max_length(GTK::Raw::Definitions::GtkEntryBuffer, uint) will never work with declared signature (GTK::Raw::Definitions::GtkEntryBuffer $buffer, int32 $max_length)
-        at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer):63
-        ------> [32m        [33m⏏[31mgtk_entry_buffer_set_max_length($!b, $m)[0m
-    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/Entry.pm6 (GTK::Entry)
-    Stage start      :   0.000
-    Stage parse      :   3.238
-    Stage syntaxcheck:   0.000
-    Stage ast        :   0.000
-    Stage optimize   : [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer)
-    Calling gtk_entry_buffer_set_max_length(GTK::Raw::Definitions::GtkEntryBuffer, uint) will never work with declared signature (GTK::Raw::Definitions::GtkEntryBuffer $buffer, int32 $max_length)
-    at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer):63
-    ------> [32m        [33m⏏[31mgtk_entry_buffer_set_max_length($!b, $m)[0m
-    
-    at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/Entry.pm6 (GTK::Entry):14
-    
-    at /home/cbwood/Projects/p6-GtkPlus/lib/GTK.pm6 (GTK):20
-[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkBuilder/lib/GTK/Builder.pm6 (GTK::Builder)
-Stage start      :   0.000
-
-    precomp ../p6-GtkPlus/lib/GTK/Entry.pm6
-    Stage start      :   0.000
-    
-        precomp ../p6-GtkPlus/lib/GTK/EntryBuffer.pm6
-        Stage start      :   0.000
-        Stage parse      :   3.238
-        Stage syntaxcheck:   0.000
-        Stage ast        :   0.000
-        Stage optimize   : [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer)
-        Calling gtk_entry_buffer_set_max_length(GTK::Raw::Definitions::GtkEntryBuffer, uint) will never work with declared signature (GTK::Raw::Definitions::GtkEntryBuffer $buffer, int32 $max_length)
-        at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer):63
-        ------> [32m        [33m⏏[31mgtk_entry_buffer_set_max_length($!b, $m)[0m
-    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/Entry.pm6 (GTK::Entry)
-    Stage start      :   0.000
-    Stage parse      :   3.238
-    Stage syntaxcheck:   0.000
-    Stage ast        :   0.000
-    Stage optimize   : [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer)
-    Calling gtk_entry_buffer_set_max_length(GTK::Raw::Definitions::GtkEntryBuffer, uint) will never work with declared signature (GTK::Raw::Definitions::GtkEntryBuffer $buffer, int32 $max_length)
-    at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer):63
-    ------> [32m        [33m⏏[31mgtk_entry_buffer_set_max_length($!b, $m)[0m
-    
-    at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/Entry.pm6 (GTK::Entry):14
-[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK.pm6 (GTK)
-Stage start      :   0.000
-
-    precomp ../p6-GtkPlus/lib/GTK/EntryBuffer.pm6
-    Stage start      :   0.000
-    Stage parse      :   3.238
-    Stage syntaxcheck:   0.000
-    Stage ast        :   0.000
-    Stage optimize   : [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer)
-    Calling gtk_entry_buffer_set_max_length(GTK::Raw::Definitions::GtkEntryBuffer, uint) will never work with declared signature (GTK::Raw::Definitions::GtkEntryBuffer $buffer, int32 $max_length)
-    at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer):63
-    ------> [32m        [33m⏏[31mgtk_entry_buffer_set_max_length($!b, $m)[0m
-[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/Entry.pm6 (GTK::Entry)
-Stage start      :   0.000
-Stage parse      :   3.238
+    Stage optimize   :   0.077
+    Stage mast       :   0.253
+    Stage mbc        :   0.195
+R: Associative
+Stage parse      :  30.399
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   : [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer)
-Calling gtk_entry_buffer_set_max_length(GTK::Raw::Definitions::GtkEntryBuffer, uint) will never work with declared signature (GTK::Raw::Definitions::GtkEntryBuffer $buffer, int32 $max_length)
-at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/EntryBuffer.pm6 (GTK::EntryBuffer):63
-------> [32m        [33m⏏[31mgtk_entry_buffer_set_max_length($!b, $m)[0m
-
-at /home/cbwood/Projects/p6-GtkPlus/lib/GTK/Entry.pm6 (GTK::Entry):14
-
-at /home/cbwood/Projects/p6-GtkPlus/lib/GTK.pm6 (GTK):20
-
-at /home/cbwood/Projects/p6-GtkBuilder/lib/GTK/Builder.pm6 (GTK::Builder):15
-
-at -e:1
+Stage optimize   :   0.002
+Stage mast       :   0.004
+Stage mbc        :   0.000
+Stage moar       :   0.000
+R: GLib::Roles::Object
  === GTK::Builder::MRO === (23/44)
 Stage start      :   0.000
 
     precomp lib/GTK/Builder/MRO.pm6
     Stage start      :   0.000
-    Stage parse      :   0.297
+    Stage parse      :   0.262
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.019
-    Stage mast       :   0.009
+    Stage optimize   :   0.017
+    Stage mast       :   0.008
     Stage mbc        :   0.001
-Stage parse      :   1.759
+Stage parse      :   1.582
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.002
-Stage mast       :   0.007
+Stage mast       :   0.006
 Stage mbc        :   0.001
 Stage moar       :   0.000
  === GTK::Builder::Base === (24/44)
@@ -643,162 +244,162 @@ Stage start      :   0.000
 
     precomp lib/GTK/Builder/Base.pm6
     Stage start      :   0.000
-    Stage parse      :   1.623
+    Stage parse      :   1.527
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.034
-    Stage mast       :   0.045
+    Stage optimize   :   0.037
+    Stage mast       :   0.048
     Stage mbc        :   0.004
-Stage parse      :   3.155
+Stage parse      :   2.987
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.002
-Stage mast       :   0.007
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === GTK::Builder::Box === (25/44)
 Stage start      :   0.000
 
     precomp lib/GTK/Builder/Box.pm6
     Stage start      :   0.000
-    Stage parse      :   1.376
+    Stage parse      :   1.341
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.024
-    Stage mast       :   0.032
+    Stage optimize   :   0.019
+    Stage mast       :   0.030
     Stage mbc        :   0.002
-Stage parse      :   2.790
+Stage parse      :   2.754
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.002
-Stage mast       :   0.007
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === GTK::Builder::ListBoxRow === (26/44)
 Stage start      :   0.000
 
     precomp lib/GTK/Builder/ListBoxRow.pm6
     Stage start      :   0.000
-    Stage parse      :   1.389
+    Stage parse      :   1.301
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.006
-    Stage mast       :   0.014
+    Stage optimize   :   0.005
+    Stage mast       :   0.013
     Stage mbc        :   0.001
-Stage parse      :   2.807
+Stage parse      :   2.690
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.002
-Stage mast       :   0.007
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === GTK::Builder::MenuButton === (27/44)
 Stage start      :   0.000
 
     precomp lib/GTK/Builder/MenuButton.pm6
     Stage start      :   0.000
-    Stage parse      :   1.413
+    Stage parse      :   1.334
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.015
-    Stage mast       :   0.031
+    Stage optimize   :   0.019
+    Stage mast       :   0.030
     Stage mbc        :   0.002
-Stage parse      :   2.875
+Stage parse      :   2.733
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.002
-Stage mast       :   0.007
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === GTK::Builder::MenuShell === (28/44)
 Stage start      :   0.000
 
     precomp lib/GTK/Builder/MenuShell.pm6
     Stage start      :   0.000
-    Stage parse      :   1.342
+    Stage parse      :   1.287
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
     Stage optimize   :   0.002
-    Stage mast       :   0.013
+    Stage mast       :   0.009
     Stage mbc        :   0.001
-Stage parse      :   2.746
+Stage parse      :   2.668
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.002
-Stage mast       :   0.007
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === GTK::Builder::Orientable === (29/44)
 Stage start      :   0.000
 
     precomp lib/GTK/Builder/Orientable.pm6
     Stage start      :   0.000
-    Stage parse      :   1.401
+    Stage parse      :   1.299
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.010
-    Stage mast       :   0.019
+    Stage optimize   :   0.009
+    Stage mast       :   0.017
     Stage mbc        :   0.001
-Stage parse      :   2.888
+Stage parse      :   2.726
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.002
-Stage mast       :   0.007
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === GTK::Builder::Widget === (30/44)
 Stage start      :   0.000
 
     precomp lib/GTK/Builder/Widget.pm6
     Stage start      :   0.000
-    Stage parse      :   1.443
+    Stage parse      :   1.349
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.018
-    Stage mast       :   0.037
-    Stage mbc        :   0.001
-Stage parse      :   2.954
+    Stage optimize   :   0.016
+    Stage mast       :   0.031
+    Stage mbc        :   0.005
+Stage parse      :   2.728
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.002
-Stage mast       :   0.007
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === GTK::Builder::Window === (31/44)
 Stage start      :   0.000
 
     precomp lib/GTK/Builder/Window.pm6
     Stage start      :   0.000
-    Stage parse      :   1.376
+    Stage parse      :   1.291
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.022
-    Stage mast       :   0.031
+    Stage optimize   :   0.023
+    Stage mast       :   0.029
     Stage mbc        :   0.002
-Stage parse      :   2.862
+Stage parse      :   2.732
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.002
-Stage mast       :   0.007
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === GTK::BuilderWidgets === (32/44)
 Stage start      :   0.000
 
     precomp lib/GTK/BuilderWidgets.pm6
     Stage start      :   0.000
-    Stage parse      :   1.738
+    Stage parse      :   1.706
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.016
+    Stage optimize   :   0.015
     Stage mast       :   0.035
     Stage mbc        :   0.002
 R: Pluggable
-Stage parse      :   3.278
+Stage parse      :   3.257
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.002
-Stage mast       :   0.007
+Stage optimize   :   0.001
+Stage mast       :   0.002
 Stage mbc        :   0.001
 Stage moar       :   0.000
  === GTK::Builder::Actionable === (33/44)
@@ -806,53 +407,53 @@ Stage start      :   0.000
 
     precomp lib/GTK/Builder/Actionable.pm6
     Stage start      :   0.000
-    Stage parse      :   1.361
+    Stage parse      :   1.296
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.008
-    Stage mast       :   0.016
+    Stage optimize   :   0.007
+    Stage mast       :   0.014
     Stage mbc        :   0.001
-Stage parse      :   2.854
+Stage parse      :   2.690
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.002
-Stage mast       :   0.011
-Stage mbc        :   0.002
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === GTK::Builder::Button === (34/44)
 Stage start      :   0.000
 
     precomp lib/GTK/Builder/Button.pm6
     Stage start      :   0.000
-    Stage parse      :   1.416
+    Stage parse      :   1.284
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.012
-    Stage mast       :   0.026
-    Stage mbc        :   0.002
-Stage parse      :   2.865
+    Stage optimize   :   0.011
+    Stage mast       :   0.025
+    Stage mbc        :   0.001
+Stage parse      :   2.694
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.002
-Stage mast       :   0.007
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === GTK::Builder::Entry === (35/44)
 Stage start      :   0.000
 
     precomp lib/GTK/Builder/Entry.pm6
     Stage start      :   0.000
-    Stage parse      :   1.742
+    Stage parse      :   1.685
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.050
-    Stage mast       :   0.085
+    Stage optimize   :   0.053
+    Stage mast       :   0.080
     Stage mbc        :   0.006
-Stage parse      :   3.323
+Stage parse      :   3.401
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.002
-Stage mast       :   0.012
+Stage optimize   :   0.001
+Stage mast       :   0.002
 Stage mbc        :   0.001
 Stage moar       :   0.000
  === GTK::Builder::Frame === (36/44)
@@ -860,164 +461,164 @@ Stage start      :   0.000
 
     precomp lib/GTK/Builder/Frame.pm6
     Stage start      :   0.000
-    Stage parse      :   1.422
+    Stage parse      :   1.361
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.020
-    Stage mast       :   0.033
+    Stage optimize   :   0.024
+    Stage mast       :   0.031
     Stage mbc        :   0.002
-Stage parse      :   2.892
+Stage parse      :   2.801
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.002
-Stage mast       :   0.007
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === GTK::Builder::Grid === (37/44)
 Stage start      :   0.000
 
     precomp lib/GTK/Builder/Grid.pm6
     Stage start      :   0.000
-    Stage parse      :   1.694
+    Stage parse      :   1.610
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.009
-    Stage mast       :   0.030
+    Stage optimize   :   0.008
+    Stage mast       :   0.026
     Stage mbc        :   0.002
-Stage parse      :   3.215
+Stage parse      :   3.054
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.002
-Stage mast       :   0.007
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === GTK::Builder::Image === (38/44)
 Stage start      :   0.000
 
     precomp lib/GTK/Builder/Image.pm6
     Stage start      :   0.000
-    Stage parse      :   1.395
+    Stage parse      :   1.290
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.009
-    Stage mast       :   0.017
+    Stage optimize   :   0.008
+    Stage mast       :   0.016
     Stage mbc        :   0.001
-Stage parse      :   2.827
+Stage parse      :   2.693
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.002
-Stage mast       :   0.007
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === GTK::Builder::Label === (39/44)
 Stage start      :   0.000
 
     precomp lib/GTK/Builder/Label.pm6
     Stage start      :   0.000
-    Stage parse      :   1.352
+    Stage parse      :   1.322
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
     Stage optimize   :   0.008
-    Stage mast       :   0.015
+    Stage mast       :   0.014
     Stage mbc        :   0.001
-Stage parse      :   2.755
+Stage parse      :   2.728
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.002
-Stage mast       :   0.007
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === GTK::Builder::LinkButton === (40/44)
 Stage start      :   0.000
 
     precomp lib/GTK/Builder/LinkButton.pm6
     Stage start      :   0.000
-    Stage parse      :   1.377
+    Stage parse      :   1.328
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
     Stage optimize   :   0.006
-    Stage mast       :   0.013
+    Stage mast       :   0.012
     Stage mbc        :   0.001
-Stage parse      :   2.801
+Stage parse      :   2.700
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.002
-Stage mast       :   0.007
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === GTK::Builder::Menu === (41/44)
 Stage start      :   0.000
 
     precomp lib/GTK/Builder/Menu.pm6
     Stage start      :   0.000
-    Stage parse      :   1.395
+    Stage parse      :   1.316
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.006
+    Stage optimize   :   0.005
     Stage mast       :   0.014
     Stage mbc        :   0.001
-Stage parse      :   2.839
+Stage parse      :   2.702
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.002
-Stage mast       :   0.007
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === GTK::Builder::MenuItem === (42/44)
 Stage start      :   0.000
 
     precomp lib/GTK/Builder/MenuItem.pm6
     Stage start      :   0.000
-    Stage parse      :   1.399
+    Stage parse      :   1.328
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
     Stage optimize   :   0.009
-    Stage mast       :   0.017
+    Stage mast       :   0.016
     Stage mbc        :   0.001
-Stage parse      :   2.837
+Stage parse      :   2.750
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.002
-Stage mast       :   0.007
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === GTK::Builder::Revealer === (43/44)
 Stage start      :   0.000
 
     precomp lib/GTK/Builder/Revealer.pm6
     Stage start      :   0.000
-    Stage parse      :   1.445
+    Stage parse      :   1.366
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.023
-    Stage mast       :   0.035
+    Stage optimize   :   0.020
+    Stage mast       :   0.036
     Stage mbc        :   0.002
-Stage parse      :   2.874
+Stage parse      :   2.818
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.002
-Stage mast       :   0.007
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === GTK::Builder::ToggleButton === (44/44)
 Stage start      :   0.000
 
     precomp lib/GTK/Builder/ToggleButton.pm6
     Stage start      :   0.000
-    Stage parse      :   1.335
+    Stage parse      :   1.278
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.008
-    Stage mast       :   0.011
+    Stage optimize   :   0.004
+    Stage mast       :   0.013
     Stage mbc        :   0.001
-Stage parse      :   2.785
+Stage parse      :   2.669
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.002
-Stage mast       :   0.007
+Stage optimize   :   0.001
+Stage mast       :   0.002
 Stage mbc        :   0.001
 Stage moar       :   0.000
 
-real 184.27
-user 217.67
-sys 14.09
+real 161.03
+user 184.77
+sys 11.66
