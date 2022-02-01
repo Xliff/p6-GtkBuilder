@@ -15,6 +15,7 @@
       "GTK::Builder::Roles::Widget" :  "lib/GTK/Builder/Roles/Widget.pm6" ,
       "GTK::Builder::WidgetMRO"     :  "lib/GTK/Builder/WidgetMRO.pm6"    ,
       "GTK::Raw::Builder"           :  "lib/GTK/Raw/Builder.pm6"          ,
+      "GTK::Builder::Subs"          :  "lib/GTK/Builder/Subs.pm6"         ,
       "GTK::Builder::Registry"      :  "lib/GTK/Builder/Registry.pm6"     ,
       "GTK::Builder"                :  "lib/GTK/Builder.pm6"              ,
       "GTK::Builder::MRO"           :  "lib/GTK/Builder/MRO.pm6"          ,
