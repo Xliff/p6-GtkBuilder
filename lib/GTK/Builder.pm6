@@ -3,6 +3,7 @@ use v6.c;
 use Method::Also;
 use NativeCall;
 
+use LibXML;
 use Data::Dump::Tree;
 
 use GLib::GSList;
