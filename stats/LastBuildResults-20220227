@@ -1,0 +1,1152 @@
+Dependency Generation
+=====================
+real 0.59
+user 0.90
+sys 0.05
+ === Data::Dump::Tree === (1/44)
+Stage start      :   0.000
+
+    precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/E2E0C139A65888097CE52CDB91E467B703EEB2F8
+    Stage start      :   0.000
+    
+        precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/E93CC3997FF8CEA1925ED82D3F0413017B437D27
+        Stage start      :   0.000
+        Stage parse      :   0.144
+        Stage syntaxcheck:   0.000
+        Stage ast        :   0.000
+        Stage optimize   :   0.013
+        Stage mast       :   0.046
+        Stage mbc        :   0.001
+    
+        precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/A55A8806609B7829A107912BBF15282CEF3F4F57
+        Stage start      :   0.000
+        Stage parse      :   0.134
+        Stage syntaxcheck:   0.000
+        Stage ast        :   0.000
+        Stage optimize   :   0.003
+        Stage mast       :   0.006
+        Stage mbc        :   0.002
+    
+        precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/A4F48A81CAB596F609BA6A546BFC3F022CECD104
+        Stage start      :   0.000
+        Stage parse      :   1.382
+        Stage syntaxcheck:   0.000
+        Stage ast        :   0.000
+        Stage optimize   :   0.068
+        Stage mast       :   0.079
+        Stage mbc        :   0.009
+    
+        precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/DC6F3B0F8F863A039D306C3DED50EE484AC2137D
+        Stage start      :   0.000
+        Stage parse      :   1.066
+        Stage syntaxcheck:   0.000
+        Stage ast        :   0.000
+        Stage optimize   :   0.022
+        Stage mast       :   0.023
+        Stage mbc        :   0.005
+    
+        precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/A66724835DE035BEF9BD8BC20122604690FBB5E2
+        Stage start      :   0.000
+        Stage parse      :   0.999
+        Stage syntaxcheck:   0.000
+        Stage ast        :   0.000
+        Stage optimize   :   0.011
+        Stage mast       :   0.031
+        Stage mbc        :   0.002
+    Stage parse      :   5.863
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.150
+    Stage mast       :   0.226
+    Stage mbc        :   0.007
+Stage parse      :   7.163
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.004
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GIO::Menu === (2/44)
+Stage start      :   0.000
+Stage parse      :   1.471
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.002
+Stage moar       :   0.000
+ === GLib::GSList === (3/44)
+Stage start      :   0.000
+Stage parse      :   1.192
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GLib::Roles::Object === (4/44)
+Stage start      :   0.000
+Stage parse      :   1.291
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.002
+Stage moar       :   0.000
+ === GTK === (5/44)
+Stage start      :   0.000
+Stage parse      :   7.577
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.031
+Stage moar       :   0.000
+ === GTK::Adjustment === (6/44)
+Stage start      :   0.000
+Stage parse      :   1.723
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.004
+Stage moar       :   0.000
+ === GTK::Application === (7/44)
+Stage start      :   0.000
+Stage parse      :   3.030
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.006
+Stage moar       :   0.000
+ === GTK::CSSProvider === (8/44)
+Stage start      :   0.000
+Stage parse      :   1.863
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.003
+Stage moar       :   0.000
+ === GTK::Raw::Enums === (9/44)
+Stage start      :   0.000
+Stage parse      :   1.016
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.003
+Stage mast       :   0.004
+Stage mbc        :   0.003
+Stage moar       :   0.000
+ === GTK::Raw::Subs === (10/44)
+Stage start      :   0.000
+Stage parse      :   1.025
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Raw::Types === (11/44)
+Stage start      :   0.000
+Stage parse      :   1.583
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.012
+Stage mast       :   0.008
+Stage mbc        :   0.013
+Stage moar       :   0.000
+ === GTK::TypeClass === (12/44)
+Stage start      :   0.000
+
+    precomp ../p6-GtkPlus/lib/GTK/TypeClass.pm6
+    Stage start      :   0.000
+    Stage parse      :   0.184
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.012
+    Stage mast       :   0.012
+    Stage mbc        :   0.002
+Stage parse      :   1.110
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.005
+Stage mbc        :   0.003
+Stage moar       :   0.000
+ === GTK::Widget === (13/44)
+Stage start      :   0.000
+Stage parse      :   2.328
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.006
+Stage moar       :   0.000
+ === GTK::Window === (14/44)
+Stage start      :   0.000
+Stage parse      :   2.559
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.006
+Stage moar       :   0.000
+ === LibXML === (15/44)
+Stage start      :   0.000
+
+    precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/FDF6EA2890649868B6CE787B8A36FBD90075AA2F
+    Stage start      :   0.000
+    
+        precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/06A850F014998840B3F73CBE841AC1153A2C1804
+        Stage start      :   0.000
+        
+            precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/7C1F1F76A318B9D3454491DC626B188DFA879E93
+            Stage start      :   0.000
+            
+                precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/27E3AFDFF979C0EC824060C2D1714F0DB54B7724
+                Stage start      :   0.000
+                
+                    precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/C177060D6C806C1413F92079A820C1313AE86CB2
+                    Stage start      :   0.000
+                    Stage parse      :   0.365
+                    Stage syntaxcheck:   0.000
+                    Stage ast        :   0.000
+                    Stage optimize   :   0.043
+                    Stage mast       :   0.041
+                    Stage mbc        :   0.014
+                Stage parse      :   1.937
+                Stage syntaxcheck:   0.000
+                Stage ast        :   0.000
+                Stage optimize   :   0.060
+                Stage mast       :   0.037
+                Stage mbc        :   0.010
+            
+                precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/8F4D2ADF9FBCD95BE3094CA7763D773AE0F2F9AC
+                Stage start      :   0.000
+                
+                    precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/34E28AE49FD4C0324E3F69B703D721BC9DB70F9B
+                    Stage start      :   0.000
+                    
+                        precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/92E10D1C277573F880C307DBF9B2D12E32E2AC49
+                        Stage start      :   0.000
+                        Stage parse      :   0.158
+                        Stage syntaxcheck:   0.000
+                        Stage ast        :   0.000
+                        Stage optimize   :   0.004
+                        Stage mast       :   0.007
+                        Stage mbc        :   0.003
+                    Stage parse      :   1.399
+                    Stage syntaxcheck:   0.000
+                    Stage ast        :   0.000
+                    Stage optimize   :   0.007
+                    Stage mast       :   0.014
+                    Stage mbc        :   0.008
+                
+                    precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/70ADE570E61316F193B0DFCE92D6D2DAB0230F34
+                    Stage start      :   0.000
+                    Stage parse      :   1.250
+                    Stage syntaxcheck:   0.000
+                    Stage ast        :   0.000
+                    Stage optimize   :   0.016
+                    Stage mast       :   0.021
+                    Stage mbc        :   0.018
+                
+                    precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/411E76CFB7955D31A484636038776F85333637FE
+                    Stage start      :   0.000
+                    
+                        precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/D940284CFAB6347A0F3FC919C83D493A930C936E
+                        Stage start      :   0.000
+                        Stage parse      :   0.150
+                        Stage syntaxcheck:   0.000
+                        Stage ast        :   0.000
+                        Stage optimize   :   0.008
+                        Stage mast       :   0.012
+                        Stage mbc        :   0.002
+                    Stage parse      :   1.345
+                    Stage syntaxcheck:   0.000
+                    Stage ast        :   0.000
+                    Stage optimize   :   0.011
+                    Stage mast       :   0.011
+                    Stage mbc        :   0.003
+                
+                    precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/6A60C5289189CE87E742143E39F5937B2E5B0BA1
+                    Stage start      :   0.000
+                    
+                        precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/CA528C90098BA1F15F95CE957F45E115374D37D4
+                        Stage start      :   0.000
+                        Stage parse      :   1.366
+                        Stage syntaxcheck:   0.000
+                        Stage ast        :   0.000
+                        Stage optimize   :   0.055
+                        Stage mast       :   0.074
+                        Stage mbc        :   0.010
+                    Stage parse      :   2.716
+                    Stage syntaxcheck:   0.000
+                    Stage ast        :   0.000
+                    Stage optimize   :   0.033
+                    Stage mast       :   0.051
+                    Stage mbc        :   0.007
+                
+                    precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/7BFE6EFB7E2C0871723B7C4492D0EA8BF3614073
+                    Stage start      :   0.000
+                    Stage parse      :   1.145
+                    Stage syntaxcheck:   0.000
+                    Stage ast        :   0.000
+                    Stage optimize   :   0.074
+                    Stage mast       :   0.025
+                    Stage mbc        :   0.009
+                Stage parse      :  19.187
+                Stage syntaxcheck:   0.000
+                Stage ast        :   0.000
+                Stage optimize   :   0.258
+                Stage mast       :   0.556
+                Stage mbc        :   0.590
+            Stage parse      :  24.215
+            Stage syntaxcheck:   0.000
+            Stage ast        :   0.000
+            Stage optimize   :   0.025
+            Stage mast       :   0.040
+            Stage mbc        :   0.005
+        
+            precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/B9287F585E358244F7B865C04180CDD5F2F54B6E
+            Stage start      :   0.000
+            
+                precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/70D291204D40EB6F0FE27E215EA91F9BDACED5EF
+                Stage start      :   0.000
+                
+                    precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/5C92067B36156B379A532DD630B82952728A8562
+                    Stage start      :   0.000
+                    Stage parse      :   1.196
+                    Stage syntaxcheck:   0.000
+                    Stage ast        :   0.000
+                    Stage optimize   :   0.020
+                    Stage mast       :   0.046
+                    Stage mbc        :   0.005
+                
+                    precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/E00DC896056DE433443F52950E28EAC3ACF650BA
+                    Stage start      :   0.000
+                    Stage parse      :   0.109
+                    Stage syntaxcheck:   0.000
+                    Stage ast        :   0.000
+                    Stage optimize   :   0.006
+                    Stage mast       :   0.006
+                    Stage mbc        :   0.002
+                
+                    precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/48DCB34D7FA429291620AF4F82F6DE54B4D375AE
+                    Stage start      :   0.000
+                    Stage parse      :   1.222
+                    Stage syntaxcheck:   0.000
+                    Stage ast        :   0.000
+                    Stage optimize   :   0.019
+                    Stage mast       :   0.029
+                    Stage mbc        :   0.006
+                
+                    precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/885314FC9AE6570B7E83A5372F14A6B76F289814
+                    Stage start      :   0.000
+                    
+                        precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/A2BE1B555504803F167D7F06C43AA54D4727F7C2
+                        Stage start      :   0.000
+                        Stage parse      :   1.573
+                        Stage syntaxcheck:   0.000
+                        Stage ast        :   0.000
+                        Stage optimize   :   0.065
+                        Stage mast       :   0.059
+                        Stage mbc        :   0.017
+                    
+                        precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/254279CF63B590043FB27F58D58ABD4ED92ABCAE
+                        Stage start      :   0.000
+                        Stage parse      :   0.214
+                        Stage syntaxcheck:   0.000
+                        Stage ast        :   0.000
+                        Stage optimize   :   0.021
+                        Stage mast       :   0.027
+                        Stage mbc        :   0.004
+                    Stage parse      :   3.185
+                    Stage syntaxcheck:   0.000
+                    Stage ast        :   0.000
+                    Stage optimize   :   0.009
+                    Stage mast       :   0.017
+                    Stage mbc        :   0.002
+                Stage parse      :   8.099
+                Stage syntaxcheck:   0.000
+                Stage ast        :   0.000
+                Stage optimize   :   0.063
+                Stage mast       :   0.110
+                Stage mbc        :   0.019
+            
+                precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/16A3781A6E1052A187928B20D1CA13E9E4DB3154
+                Stage start      :   0.000
+                Stage parse      :   1.029
+                Stage syntaxcheck:   0.000
+                Stage ast        :   0.000
+                Stage optimize   :   0.008
+                Stage mast       :   0.016
+                Stage mbc        :   0.002
+            
+                precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/F1548E910001D738C9E7E15A3E3B5B9DEB409C38
+                Stage start      :   0.000
+                Stage parse      :   1.128
+                Stage syntaxcheck:   0.000
+                Stage ast        :   0.000
+                Stage optimize   :   0.009
+                Stage mast       :   0.021
+                Stage mbc        :   0.002
+            
+                precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/3956E4981871BD6BC1EAFEA010E2CECF900A388D
+                Stage start      :   0.000
+                
+                    precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/5C1241A5E18742FE5B5B077B5FDFE3150D7F0689
+                    Stage start      :   0.000
+                    Stage parse      :   1.106
+                    Stage syntaxcheck:   0.000
+                    Stage ast        :   0.000
+                    Stage optimize   :   0.017
+                    Stage mast       :   0.028
+                    Stage mbc        :   0.020
+                Stage parse      :   2.320
+                Stage syntaxcheck:   0.000
+                Stage ast        :   0.000
+                Stage optimize   :   0.004
+                Stage mast       :   0.016
+                Stage mbc        :   0.001
+            
+                precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/790E7BC92B7C28DA130AAA0D58BD282861D1FF30
+                Stage start      :   0.000
+                Stage parse      :   1.074
+                Stage syntaxcheck:   0.000
+                Stage ast        :   0.000
+                Stage optimize   :   0.008
+                Stage mast       :   0.013
+                Stage mbc        :   0.001
+            
+                precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/84E91C8C1526CB16482C453C667A7459F5437D23
+                Stage start      :   0.000
+                
+                    precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/E3FFF441A99BD2DAFB652540DCCA8D39F3C6A8AB
+                    Stage start      :   0.000
+                    
+                        precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/EBA70ACEB9406254A8E5EC34650B4D8E31E95666
+                        Stage start      :   0.000
+                        Stage parse      :   1.133
+                        Stage syntaxcheck:   0.000
+                        Stage ast        :   0.000
+                        Stage optimize   :   0.017
+                        Stage mast       :   0.025
+                        Stage mbc        :   0.002
+                    
+                        precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/0E6FC12F16F9CDA4D1B4E3C6F2B6D91A31E6EC81
+                        Stage start      :   0.000
+                        
+                            precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/E75FE29528160EF26801D4A5149E1AC8CC60F57B
+                            Stage start      :   0.000
+                            Stage parse      :   1.148
+                            Stage syntaxcheck:   0.000
+                            Stage ast        :   0.000
+                            Stage optimize   :   0.013
+                            Stage mast       :   0.017
+                            Stage mbc        :   0.003
+                        
+                            precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/CF19CE9A48E29176D1EFE4AE9BFA94177962CB98
+                            Stage start      :   0.000
+                            Stage parse      :   1.168
+                            Stage syntaxcheck:   0.000
+                            Stage ast        :   0.000
+                            Stage optimize   :   0.016
+                            Stage mast       :   0.022
+                            Stage mbc        :   0.004
+                        Stage parse      :   3.757
+                        Stage syntaxcheck:   0.000
+                        Stage ast        :   0.000
+                        Stage optimize   :   0.013
+                        Stage mast       :   0.026
+                        Stage mbc        :   0.004
+                    
+                        precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/B79B2AE6CA6520E63C9A8B90CC963BA95D39F6E7
+                        Stage start      :   0.000
+                        Stage parse      :   0.150
+                        Stage syntaxcheck:   0.000
+                        Stage ast        :   0.000
+                        Stage optimize   :   0.015
+                        Stage mast       :   0.031
+                        Stage mbc        :   0.002
+                    Stage parse      :   7.076
+                    Stage syntaxcheck:   0.000
+                    Stage ast        :   0.000
+                    Stage optimize   :   0.031
+                    Stage mast       :   0.050
+                    Stage mbc        :   0.006
+                
+                    precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/4E9CB15A4B52F1E60120C810FC08A8F51ADDC8C6
+                    Stage start      :   0.000
+                    Stage parse      :   1.321
+                    Stage syntaxcheck:   0.000
+                    Stage ast        :   0.000
+                    Stage optimize   :   0.020
+                    Stage mast       :   0.034
+                    Stage mbc        :   0.006
+                Stage parse      :  10.015
+                Stage syntaxcheck:   0.000
+                Stage ast        :   0.000
+                Stage optimize   :   0.019
+                Stage mast       :   0.032
+                Stage mbc        :   0.002
+            
+                precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/51B792352D5FD34AEFDF9EB785C1453EB08B7F02
+                Stage start      :   0.000
+                
+                    precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/A1CAF33D1679876C6E30FE0AB594C8652715560E
+                    Stage start      :   0.000
+                    Stage parse      :   1.061
+                    Stage syntaxcheck:   0.000
+                    Stage ast        :   0.000
+                    Stage optimize   :   0.006
+                    Stage mast       :   0.018
+                    Stage mbc        :   0.002
+                
+                    precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/C1EF3F0F05F7C43D2C310696C156EC4077FCF806
+                    Stage start      :   0.000
+                    
+                        precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/6E05746D6AF048B7E7008456119C4155B85A0B1C
+                        Stage start      :   0.000
+                        Stage parse      :   1.086
+                        Stage syntaxcheck:   0.000
+                        Stage ast        :   0.000
+                        Stage optimize   :   0.011
+                        Stage mast       :   0.019
+                        Stage mbc        :   0.005
+                    Stage parse      :   2.314
+                    Stage syntaxcheck:   0.000
+                    Stage ast        :   0.000
+                    Stage optimize   :   0.013
+                    Stage mast       :   0.024
+                    Stage mbc        :   0.002
+                
+                    precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/6DB47E0578FEA856A1677AFA01CE18C04104FC25
+                    Stage start      :   0.000
+                    
+                        precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/BF68F1D3B5B8660FAED5EFB649EE38070530CA36
+                        Stage start      :   0.000
+                        Stage parse      :   1.289
+                        Stage syntaxcheck:   0.000
+                        Stage ast        :   0.000
+                        Stage optimize   :   0.022
+                        Stage mast       :   0.035
+                        Stage mbc        :   0.005
+                    
+                        precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/FF81D37DB805EB1CCA9C7981262300281B1322E8
+                        Stage start      :   0.000
+                        Stage parse      :   1.109
+                        Stage syntaxcheck:   0.000
+                        Stage ast        :   0.000
+                        Stage optimize   :   0.009
+                        Stage mast       :   0.020
+                        Stage mbc        :   0.002
+                    Stage parse      :   4.239
+                    Stage syntaxcheck:   0.000
+                    Stage ast        :   0.000
+                    Stage optimize   :   0.039
+                    Stage mast       :   0.048
+                    Stage mbc        :   0.017
+                Stage parse      :   9.582
+                Stage syntaxcheck:   0.000
+                Stage ast        :   0.000
+                Stage optimize   :   0.037
+                Stage mast       :   0.058
+                Stage mbc        :   0.005
+            
+                precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/23F2877C8FFDE456BAC3130A9A966A22FB050EDF
+                Stage start      :   0.000
+                Stage parse      :   1.094
+                Stage syntaxcheck:   0.000
+                Stage ast        :   0.000
+                Stage optimize   :   0.007
+                Stage mast       :   0.017
+                Stage mbc        :   0.001
+            
+                precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/F62F53F3E39D7851E3C60EDBCE9CA5E404D63F11
+                Stage start      :   0.000
+                Stage parse      :   1.119
+                Stage syntaxcheck:   0.000
+                Stage ast        :   0.000
+                Stage optimize   :   0.005
+                Stage mast       :   0.016
+                Stage mbc        :   0.001
+            Stage parse      :  38.720
+            Stage syntaxcheck:   0.000
+            Stage ast        :   0.000
+            Stage optimize   :   0.053
+            Stage mast       :   0.096
+            Stage mbc        :   0.012
+        
+            precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/7803A89F778750160D1C59F0E3F93025AAF4976B
+            Stage start      :   0.000
+            Stage parse      :   1.195
+            Stage syntaxcheck:   0.000
+            Stage ast        :   0.000
+            Stage optimize   :   0.010
+            Stage mast       :   0.025
+            Stage mbc        :   0.001
+        Stage parse      :  66.423
+        Stage syntaxcheck:   0.000
+        Stage ast        :   0.000
+        Stage optimize   :   0.039
+        Stage mast       :   0.086
+        Stage mbc        :   0.009
+    
+        precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/9DC607AB8DBF3F3953F2BFA1490B6D7C7AC9FA67
+        Stage start      :   0.000
+        
+            precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/706C4695284C2A5405985AF1C220AAFEF74FD6C6
+            Stage start      :   0.000
+            Stage parse      :   1.246
+            Stage syntaxcheck:   0.000
+            Stage ast        :   0.000
+            Stage optimize   :   0.017
+            Stage mast       :   0.041
+            Stage mbc        :   0.002
+        Stage parse      :   3.201
+        Stage syntaxcheck:   0.000
+        Stage ast        :   0.000
+        Stage optimize   :   0.061
+        Stage mast       :   0.107
+        Stage mbc        :   0.006
+    Stage parse      :  71.397
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.007
+    Stage mast       :   0.025
+    Stage mbc        :   0.004
+Stage parse      :  72.518
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.005
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === Method::Also === (16/44)
+Stage start      :   0.000
+Stage parse      :   0.874
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.005
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === NativeCall === (17/44)
+Stage start      :   0.000
+Stage parse      :   0.969
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === Pluggable === (18/44)
+Stage start      :   0.000
+
+    precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/FD2D9910CC49775E667AFE64E685EC90A6F3BFD7
+    Stage start      :   0.000
+    
+        precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/EA6CA341123ECF37C6657DBCBE16F4B077343BB6
+        Stage start      :   0.000
+        Stage parse      :   0.477
+        Stage syntaxcheck:   0.000
+        Stage ast        :   0.000
+        Stage optimize   :   0.036
+        Stage mast       :   0.054
+        Stage mbc        :   0.003
+    
+        precomp ../../.rakubrew/versions/moar-blead/install/share/perl6/site/sources/3904DB76D93B9C4019D705B1969972596F599DE0
+        Stage start      :   0.000
+        Stage parse      :   0.209
+        Stage syntaxcheck:   0.000
+        Stage ast        :   0.000
+        Stage optimize   :   0.012
+        Stage mast       :   0.020
+        Stage mbc        :   0.003
+    Stage parse      :   1.958
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.011
+    Stage mast       :   0.017
+    Stage mbc        :   0.002
+Stage parse      :   2.930
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.005
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Raw::Builder === (19/44)
+Stage start      :   0.000
+
+    precomp lib/GTK/Raw/Builder.pm6
+    Stage start      :   0.000
+    Stage parse      :   2.909
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.023
+    Stage mast       :   0.032
+    Stage mbc        :   0.068
+Stage parse      :   4.112
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GTK::Builder::Subs === (20/44)
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/Subs.pm6
+    Stage start      :   0.000
+    Stage parse      :   1.104
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.010
+    Stage mast       :   0.027
+    Stage mbc        :   0.001
+Stage parse      :   2.262
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.005
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Builder::Registry === (21/44)
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/Registry.pm6
+    Stage start      :   0.000
+    Stage parse      :   0.910
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.006
+    Stage mast       :   0.008
+    Stage mbc        :   0.001
+Stage parse      :   1.827
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.005
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Builder === (22/44)
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder.pm6
+    Stage start      :   0.000
+    Stage parse      :  14.490
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.055
+    Stage mast       :   0.173
+    Stage mbc        :   0.118
+Stage parse      :  19.828
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GTK::Builder::MRO === (23/44)
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/MRO.pm6
+    Stage start      :   0.000
+    Stage parse      :   0.206
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.012
+    Stage mast       :   0.006
+    Stage mbc        :   0.001
+Stage parse      :   1.147
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.005
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Builder::Base === (24/44)
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/Base.pm6
+    Stage start      :   0.000
+    Stage parse      :   1.077
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.026
+    Stage mast       :   0.041
+    Stage mbc        :   0.003
+Stage parse      :   2.075
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.005
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Builder::Box === (25/44)
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/Box.pm6
+    Stage start      :   0.000
+    Stage parse      :   0.937
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.014
+    Stage mast       :   0.023
+    Stage mbc        :   0.001
+Stage parse      :   1.894
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.005
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Builder::ListBoxRow === (26/44)
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/ListBoxRow.pm6
+    Stage start      :   0.000
+    Stage parse      :   0.896
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.007
+    Stage mast       :   0.012
+    Stage mbc        :   0.001
+Stage parse      :   1.807
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.005
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Builder::MenuButton === (27/44)
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/MenuButton.pm6
+    Stage start      :   0.000
+    Stage parse      :   0.948
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.014
+    Stage mast       :   0.024
+    Stage mbc        :   0.001
+Stage parse      :   1.886
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.005
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Builder::MenuShell === (28/44)
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/MenuShell.pm6
+    Stage start      :   0.000
+    Stage parse      :   0.889
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.002
+    Stage mast       :   0.007
+    Stage mbc        :   0.001
+Stage parse      :   1.825
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.005
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Builder::Orientable === (29/44)
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/Orientable.pm6
+    Stage start      :   0.000
+    Stage parse      :   0.926
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.008
+    Stage mast       :   0.013
+    Stage mbc        :   0.001
+Stage parse      :   1.857
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.005
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Builder::Widget === (30/44)
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/Widget.pm6
+    Stage start      :   0.000
+    Stage parse      :   0.913
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.016
+    Stage mast       :   0.027
+    Stage mbc        :   0.001
+Stage parse      :   1.858
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.005
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Builder::Window === (31/44)
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/Window.pm6
+    Stage start      :   0.000
+    Stage parse      :   0.917
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.013
+    Stage mast       :   0.027
+    Stage mbc        :   0.002
+Stage parse      :   1.858
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.005
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::BuilderWidgets === (32/44)
+Stage start      :   0.000
+
+    precomp lib/GTK/BuilderWidgets.pm6
+    Stage start      :   0.000
+    Stage parse      :   1.003
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.012
+    Stage mast       :   0.028
+    Stage mbc        :   0.001
+Stage parse      :   1.966
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.005
+Stage mbc        :   0.003
+Stage moar       :   0.000
+ === GTK::Builder::Actionable === (33/44)
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/Actionable.pm6
+    Stage start      :   0.000
+    Stage parse      :   0.862
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.008
+    Stage mast       :   0.013
+    Stage mbc        :   0.001
+Stage parse      :   1.803
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.005
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Builder::Button === (34/44)
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/Button.pm6
+    Stage start      :   0.000
+    Stage parse      :   0.921
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.010
+    Stage mast       :   0.020
+    Stage mbc        :   0.001
+Stage parse      :   1.877
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.005
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Builder::Entry === (35/44)
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/Entry.pm6
+    Stage start      :   0.000
+    Stage parse      :   1.197
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.041
+    Stage mast       :   0.064
+    Stage mbc        :   0.006
+Stage parse      :   2.223
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.007
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Builder::Frame === (36/44)
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/Frame.pm6
+    Stage start      :   0.000
+    Stage parse      :   0.957
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.019
+    Stage mast       :   0.026
+    Stage mbc        :   0.002
+Stage parse      :   1.897
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.005
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Builder::Grid === (37/44)
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/Grid.pm6
+    Stage start      :   0.000
+    Stage parse      :   0.940
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.007
+    Stage mast       :   0.017
+    Stage mbc        :   0.001
+Stage parse      :   1.859
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.005
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Builder::Image === (38/44)
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/Image.pm6
+    Stage start      :   0.000
+    Stage parse      :   0.921
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.007
+    Stage mast       :   0.013
+    Stage mbc        :   0.001
+Stage parse      :   1.818
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.005
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Builder::Label === (39/44)
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/Label.pm6
+    Stage start      :   0.000
+    Stage parse      :   0.940
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.005
+    Stage mast       :   0.011
+    Stage mbc        :   0.001
+Stage parse      :   1.839
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.004
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Builder::LinkButton === (40/44)
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/LinkButton.pm6
+    Stage start      :   0.000
+    Stage parse      :   0.922
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.004
+    Stage mast       :   0.009
+    Stage mbc        :   0.001
+Stage parse      :   1.885
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.005
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Builder::Menu === (41/44)
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/Menu.pm6
+    Stage start      :   0.000
+    Stage parse      :   0.895
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.004
+    Stage mast       :   0.010
+    Stage mbc        :   0.001
+Stage parse      :   1.819
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.005
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Builder::MenuItem === (42/44)
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/MenuItem.pm6
+    Stage start      :   0.000
+    Stage parse      :   0.890
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.006
+    Stage mast       :   0.012
+    Stage mbc        :   0.001
+Stage parse      :   1.829
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.005
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Builder::Revealer === (43/44)
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/Revealer.pm6
+    Stage start      :   0.000
+    Stage parse      :   0.919
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.019
+    Stage mast       :   0.029
+    Stage mbc        :   0.002
+Stage parse      :   1.856
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.005
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Builder::ToggleButton === (44/44)
+Stage start      :   0.000
+
+    precomp lib/GTK/Builder/ToggleButton.pm6
+    Stage start      :   0.000
+    Stage parse      :   0.900
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.004
+    Stage mast       :   0.011
+    Stage mbc        :   0.001
+Stage parse      :   1.832
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.005
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+real 187.96
+user 220.64
+sys 12.61
